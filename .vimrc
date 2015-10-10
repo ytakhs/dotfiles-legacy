@@ -11,6 +11,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-endwise'
 call neobundle#end()
 filetype plugin indent on
 
