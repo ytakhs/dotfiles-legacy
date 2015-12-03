@@ -13,6 +13,9 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
+"-----------------------------------------------------------------------
+"プラグイン
+"-----------------------------------------------------------------------
 "---------------------------
 "ファイル操作
 "---------------------------
@@ -45,7 +48,7 @@ NeoBundle 'jelera/vim-javascript-syntax'
 
 "---------------------------
 "Git操作
-"--------------------------
+"---------------------------
 NeoBundle 'tpope/vim-fugitive'
 
 "---------------------------
@@ -56,9 +59,51 @@ NeoBundleLazy 'marcus/rsense',{
             \ 'filetypes':'ruby',
             \ },
             \ }
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
+NeoBundleLazy 'supermomonga/neocomplete-rsense.vim',{
+            \'autoload' : {
+            \'insert' : 1,
+            \'filetypes' : 'ruby',
+            \}}
+"--------------------------
+"rails
+"--------------------------
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'basyura/unite-rails'
 
 call neobundle#end()
+"-----------------------------------------------------------------------
+"プラグイン設定
+"-----------------------------------------------------------------------
+"--------------------------
+"vim-rails
+"--------------------------
+let g:rails_default_file='config/database.yml'
+let g:rails_level = 4
+let g:rails_mappings=1
+let g:rails_modelines=0
+let g:rails_some_option = 1
+let g:rails_statusline = 1
+let g:rails_subversion=0
+let g:rails_syntax = 1
+let g:rails_url='http://localhost:3000'
+let g:rails_ctags_arguments='--languages=-javascript'
+let g:rails_ctags_arguments = ''
+function! SetUpRailsSetting()
+  nnoremap <buffer><Space>r :R<CR>
+  nnoremap <buffer><Space>a :A<CR>
+  nnoremap <buffer><Space>m :Rmodel<Space>
+  nnoremap <buffer><Space>c :Rcontroller<Space>
+  nnoremap <buffer><Space>v :Rview<Space>
+  nnoremap <buffer><Space>p :Rpreview<CR>
+endfunction
+
+aug MyAutoCmd
+  au User Rails call SetUpRailsSetting()
+aug END
+
+aug RailsDictSetting
+  au!
+aug END
 "---------------------------
 "Unite
 "---------------------------
@@ -70,6 +115,11 @@ nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+
+"--------------------------
+"NERDTree
+"--------------------------
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
 filetype plugin indent on
