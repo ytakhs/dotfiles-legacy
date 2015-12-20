@@ -1,1 +1,5 @@
-# 自分用vim及びMacVimの設定ファイル
+# dotfileの設定
+
+#### vim
+
+#### macvim
