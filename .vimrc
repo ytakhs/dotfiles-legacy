@@ -1,11 +1,17 @@
-syntax on
+
 set number
-set clipboard+=unnamed
+set clipboard+=unnamed,autoselect
 set autoindent
 set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set cursorline
+set cursorcolumn
+set hlsearch
+set incsearch
+set mouse=a
+set wildmenu wildmode=list:longest,full
+syntax on
 
 
 if has('vim_starting')
@@ -39,6 +45,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'tyru/caw.vim.git'
+nmap <C-K> <Plug>(caw:i:toggle)
+vmap <C-K> <Plug>(caw:i:toggle)
 "---------------------------
 "HTML
 "---------------------------
@@ -64,6 +73,8 @@ NeoBundleLazy 'supermomonga/neocomplete-rsense.vim',{
             \'insert' : 1,
             \'filetypes' : 'ruby',
             \}}
+
+NeoBundle 'tpope/vim-endwise'
 "--------------------------
 "rails
 "--------------------------
