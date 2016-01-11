@@ -1,0 +1,7 @@
+# Ignore--------------
+*#
+elpa/
+auto-save-list/
+
+#Except---------------
+!init.el
