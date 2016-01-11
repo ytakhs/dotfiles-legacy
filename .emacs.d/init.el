@@ -1,4 +1,38 @@
 (require 'package)
+; package------------------------------
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+
+(package-initialize)
+
+(package-refresh-contents)
+(defvar my/favorite-packages
+  '(
+	;global
+    auto-complete fuzzy popup pos-tip
+
+    popwin elscreen yascroll buffer-move
+
+    flycheck flymake-jslint
+
+    go-mode
+
+    jedi
+
+    helm
+
+    magit git-gutter
+	;ruby
+	ruby-block ruby-electric
+
+	;scala
+	ensime
+
+    ))
+(dolist (package my/favorite-packages)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+
 ; ruby--------------------------------
 
 (autoload 'ruby-mode "ruby-mode"
@@ -17,35 +51,9 @@
 ;ruby-block
 ;ruby-electric
 
-; scala
+; scala----------------------------------
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)         
 (setq ensime-completion-style 'auto-complete)
-; package------------------------------
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-
-(package-initialize)
-
-(package-refresh-contents)
-(defvar my/favorite-packages
-  '(
-    auto-complete fuzzy popup pos-tip
-
-    popwin elscreen yascroll buffer-move
-
-    flycheck flymake-jslint
-
-    go-mode
-
-    jedi
-
-    helm
-
-    magit git-gutter
-
-    ))
-(dolist (package my/favorite-packages)
-  (unless (package-installed-p package)
-    (package-install package)))
 
 ; ファイラ"dired"-------------
 ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
