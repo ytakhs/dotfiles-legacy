@@ -90,8 +90,8 @@
 (custom-set-faces
 '(hl-line ((t (:background "#474747"))))
  )
-(setq-default c-basic-offset 4     ;;基本インデント量4
-              tab-width 4          ;;タブ幅4
+(setq-default c-basic-offset 2     ;;基本インデント量4
+              tab-width 2          ;;タブ幅4
 )
 ; カーソル位置の行数を表示
 (column-number-mode t)
@@ -100,6 +100,8 @@
 ; スタートアップメッセージ削除
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
+; スワップファイルを作成しない
+(setq make-buckup-files nil)
 ;行番号を表示
 (line-number-mode t)
 ; カーソルの点滅を止める
