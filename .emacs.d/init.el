@@ -7,6 +7,9 @@
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
+	;utilities
+				dired-toggle
+
 	;global
     auto-complete fuzzy popup pos-tip
 
@@ -21,17 +24,49 @@
     helm
 
     magit git-gutter
+
+		auto-save-buffers-enhanced
+
+		web-mode
+
 	;ruby
-	ruby-block ruby-electric
+		ruby-block ruby-electric
+
+	;rails
+		dash
+		projectile-rails
 
 	;scala
-	ensime
+		ensime
+
+	;nginx
+		nginx-mode
 
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
     (package-install package)))
 
+; auto-save-buffers-enhanced--------
+(auto-save-buffers-enhanced t)
+
+; web-mode
+;; 拡張子の設定
+(add-to-list 'auto-mode-alist '("\\.phtml$"     . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp$"       . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x$"   . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb$"       . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
+;; インデント関係
+(defun web-mode-hook ()
+  "Hooks for Web mode."
+ (setq web-mode-markup-indent-offset   2)
+ (setq web-mode-css-indent-offset    2)
+	(setq web-mode-code-indent-offset 2)
+ (setq indent-tabs-mode t)
+ (setq tab-width 1))
+(add-hook 'web-mode-hook 'web-mode-hook)
 
 ; ruby--------------------------------
 
@@ -46,14 +81,19 @@
 	     (setq ruby-indent-level tab-width)
 	     (setq ruby-deep-indent-paren-style nil)
 		 (ruby-electric-mode t)
-	     ))
-;【installed_package】
-;ruby-block
-;ruby-electric
+			))
+
+; rails---------------------------------
+(projectile-global-mode)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ; scala----------------------------------
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)         
 (setq ensime-completion-style 'auto-complete)
+
+; nginx-----------------------------------
+(add-to-list 'auto-mode-alist '("nginx\\(.*\\).conf[^/]*$" . nginx-mode))
+
 
 ; ファイラ"dired"-------------
 ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
@@ -66,8 +106,11 @@
 
 ;C-hにbackspaceを割当
 (global-set-key "\C-h" 'delete-backward-char)
+
 ;オートセーブをオフ
 (setq auto-save-default nil)
+; スワップファイルを作成しない
+(setq make-buckup-files nil)
 ; 自動インデントオフ
 ;(electric-indent-mode -1)
 ; 分割ウィンドウをShift-←↑→↓
@@ -83,6 +126,8 @@
 (tool-bar-mode -1)
 ; 対応する括弧を光らせる
 (show-paren-mode 1)
+; 自動で括弧を閉じる
+;(electric-pair-mode 1)
 ; ウィンドウに収まらない時だけカッコ内も光らせる
 (setq show-paren-style 'mixed)
 ; 現在行を目立たせる(灰色)
@@ -91,7 +136,7 @@
 '(hl-line ((t (:background "#474747"))))
  )
 (setq-default c-basic-offset 2     ;;基本インデント量4
-              tab-width 2          ;;タブ幅4
+              tab-width 1          ;;タブ幅4
 )
 ; カーソル位置の行数を表示
 (column-number-mode t)
@@ -100,8 +145,6 @@
 ; スタートアップメッセージ削除
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
-; スワップファイルを作成しない
-(setq make-buckup-files nil)
 ;行番号を表示
 (line-number-mode t)
 ; カーソルの点滅を止める

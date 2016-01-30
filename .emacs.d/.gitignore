@@ -1,7 +1,8 @@
 # Ignore--------------
-*#
-elpa/
-auto-save-list/
+/*
+
 
 #Except---------------
 !init.el
+!README.md
+!.gitignore
