@@ -29,6 +29,8 @@
 
 		web-mode
 
+		git-gutter-fringe
+
 	;ruby
 		ruby-block ruby-electric
 
@@ -47,7 +49,9 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+
 ; auto-save-buffers-enhanced--------
+
 (auto-save-buffers-enhanced t)
 
 ; web-mode
@@ -94,6 +98,8 @@
 ; nginx-----------------------------------
 (add-to-list 'auto-mode-alist '("nginx\\(.*\\).conf[^/]*$" . nginx-mode))
 
+; git-gutter-fringe
+(global-git-gutter-mode t)
 
 ; ファイラ"dired"-------------
 ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
@@ -110,7 +116,7 @@
 ;オートセーブをオフ
 (setq auto-save-default nil)
 ; スワップファイルを作成しない
-(setq make-buckup-files nil)
+(setq make-backup-files nil)
 ; 自動インデントオフ
 ;(electric-indent-mode -1)
 ; 分割ウィンドウをShift-←↑→↓
