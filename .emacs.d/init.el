@@ -44,6 +44,10 @@
 	;nginx
 		nginx-mode
 
+	;lisp
+		slime
+
+
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
