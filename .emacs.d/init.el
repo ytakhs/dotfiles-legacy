@@ -7,45 +7,45 @@
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
-	;utilities
-				dired-toggle
+;utilities
+dired-toggle
 
-	;global
-   auto-complete fuzzy popup pos-tip
+;global
+auto-complete fuzzy popup pos-tip
 
-   popwin elscreen yascroll buffer-move
+popwin elscreen yascroll buffer-move
 
-   flycheck flymake-jslint
+flycheck flymake-jslint
 
-   go-mode
+go-mode
 
-  	jedi
+jedi
 
-  	helm
+helm
 
-   magit git-gutter
+magit git-gutter
 
-  	auto-save-buffers-enhanced
+auto-save-buffers-enhanced
 
-  	web-mode
+web-mode
 
-  	git-gutter-fringe
+git-gutter-fringe
 
-	;ruby
-  	ruby-block ruby-electric enh-ruby-mode
+;ruby
+ruby-block ruby-electric enh-ruby-mode
 
-	;rails
-  	dash
-  	projectile-rails
+;rails
+dash
+projectile-rails
 
-	;scala
-  	ensime
+;scala
+ensime
 
-	;nginx
-  	nginx-mode
+;nginx
+nginx-mode
 
-	;lisp
-  slime
+;lisp
+slime
 
 		;C, C++
 		
@@ -127,6 +127,8 @@
 ;C-hにbackspaceを割当
 (global-set-key "\C-h" 'delete-backward-char)
 
+(setq tab-width 1)
+(setq-default indent-tabs-mode nil)
 ;オートセーブをオフ
 (setq auto-save-default nil)
 ; スワップファイルを作成しない
