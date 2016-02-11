@@ -19,33 +19,33 @@
 
    go-mode
 
-			jedi
+  	jedi
 
-			helm
+  	helm
 
    magit git-gutter
 
-			auto-save-buffers-enhanced
+  	auto-save-buffers-enhanced
 
-			web-mode
+  	web-mode
 
-			git-gutter-fringe
+  	git-gutter-fringe
 
 	;ruby
-			ruby-block ruby-electric enh-ruby-mode
+  	ruby-block ruby-electric enh-ruby-mode
 
 	;rails
-			dash
-			projectile-rails
+  	dash
+  	projectile-rails
 
 	;scala
-			ensime
+  	ensime
 
 	;nginx
-			nginx-mode
+  	nginx-mode
 
 	;lisp
-		slime
+  slime
 
 		;C, C++
 		
