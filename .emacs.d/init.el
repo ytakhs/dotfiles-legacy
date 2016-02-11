@@ -11,48 +11,56 @@
 				dired-toggle
 
 	;global
-    auto-complete fuzzy popup pos-tip
+   auto-complete fuzzy popup pos-tip
 
-    popwin elscreen yascroll buffer-move
+   popwin elscreen yascroll buffer-move
 
-    flycheck flymake-jslint
+   flycheck flymake-jslint
 
-    go-mode
+   go-mode
 
-    jedi
+			jedi
 
-    helm
+			helm
 
-    magit git-gutter
+   magit git-gutter
 
-		auto-save-buffers-enhanced
+			auto-save-buffers-enhanced
 
-		web-mode
+			web-mode
 
-		git-gutter-fringe
+			git-gutter-fringe
 
 	;ruby
-		ruby-block ruby-electric
+			ruby-block ruby-electric enh-ruby-mode
 
 	;rails
-		dash
-		projectile-rails
+			dash
+			projectile-rails
 
 	;scala
-		ensime
+			ensime
 
 	;nginx
-		nginx-mode
+			nginx-mode
 
 	;lisp
 		slime
 
-
+		;C, C++
+		
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
     (package-install package)))
-
+; c
+(add-hook 'c-mode-common-hook
+										(lambda ()
+												(setq c-default-style "k&r")
+												(setq c-basic-offset 2)
+												))
+; c++
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ; auto-save-buffers-enhanced--------
 
@@ -78,17 +86,19 @@
 
 ; ruby--------------------------------
 
-(autoload 'ruby-mode "ruby-mode"
+(autoload 'enh-ruby-mode "enh-ruby-mode"
   "Mode for editing ruby source files" t)
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-(add-hook 'ruby-mode-hook
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" .enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+(add-hook 'enh-ruby-mode-hook
 	  '(lambda ()
 	     (setq tab-width 2)
 	     (setq ruby-indent-level tab-width)
 	     (setq ruby-deep-indent-paren-style nil)
-		 (ruby-electric-mode t)
+						(ruby-electric-mode t)
+						(setq flycheck-checker 'ruby-rubocop)
+						(flycheck-mode -1)
 			))
 
 ; rails---------------------------------
