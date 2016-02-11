@@ -55,10 +55,10 @@ slime
     (package-install package)))
 ; c
 (add-hook 'c-mode-common-hook
-										(lambda ()
-												(setq c-default-style "k&r")
-												(setq c-basic-offset 2)
-												))
+          (lambda ()
+            (setq c-default-style "k&r")
+            (setq c-basic-offset 2)
+            ))
 ; c++
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
@@ -92,14 +92,14 @@ slime
 (add-to-list 'auto-mode-alist '("Capfile$" .enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
 (add-hook 'enh-ruby-mode-hook
-	  '(lambda ()
-	     (setq tab-width 2)
-	     (setq ruby-indent-level tab-width)
-	     (setq ruby-deep-indent-paren-style nil)
-						(ruby-electric-mode t)
-						(setq flycheck-checker 'ruby-rubocop)
-						(flycheck-mode -1)
-			))
+          '(lambda ()
+             (setq tab-width 2)
+             (setq ruby-indent-level tab-width)
+             (setq ruby-deep-indent-paren-style nil)
+             (ruby-electric-mode t)
+             (setq flycheck-checker 'ruby-rubocop)
+             (flycheck-mode -1)
+             ))
 
 ; rails---------------------------------
 (projectile-global-mode)
@@ -180,11 +180,12 @@ slime
    ))
 
 (global-set-key "\M-g" 'goto-line)
-
+; 起動時の画面サイズ
 ( if(boundp 'window-system)
-	(setq default-frame-alist
-		  (append (list
-				   '(width . 100)
-				   '(height . 60)
-				   )
-				  default-frame-alist)))
+    (setq default-frame-alist
+          (append (list
+                   '(width . 100)
+                   '(height . 60)
+                   )
+                  default-frame-alist)
+          ))
