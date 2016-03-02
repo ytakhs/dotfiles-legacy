@@ -1,6 +1,7 @@
 (require 'package)
 ; package------------------------------
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 (package-initialize)
 
@@ -46,8 +47,9 @@ nginx-mode
 
 ;lisp
 slime
+geiser
 
-		;C, C++
+;C, C++
 		
     ))
 (dolist (package my/favorite-packages)
@@ -100,6 +102,14 @@ slime
              (setq flycheck-checker 'ruby-rubocop)
              (flycheck-mode -1)
              ))
+; magic-commentのinsertをオフ
+(defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
+  "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
+  (if (and (boundp 'enh-ruby-not-insert-magic-comment)
+           (not enh-ruby-not-insert-magic-comment))
+      ad-do-it))
+(ad-activate 'enh-ruby-mode-set-encoding)
+(setq-default enh-ruby-not-insert-magic-comment t)
 
 ; rails---------------------------------
 (projectile-global-mode)
@@ -189,3 +199,18 @@ slime
                    )
                   default-frame-alist)
           ))
+
+
+; setting helm
+(helm-mode +1)
+(define-key global-map (kbd "C-x b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x f") 'helm-find-files)
+(define-key global-map (kbd "M-x") 'helm-M-x)
+(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
+(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execuate-persistent-action)
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+
