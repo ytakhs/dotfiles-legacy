@@ -8,11 +8,9 @@
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
-;utilities
-dired-toggle
-
-;global
 auto-complete fuzzy popup pos-tip
+
+dired-toggle
 
 popwin elscreen yascroll buffer-move
 
@@ -22,7 +20,7 @@ go-mode
 
 jedi
 
-helm
+helm helm-swoop
 
 magit git-gutter
 
@@ -31,6 +29,10 @@ auto-save-buffers-enhanced
 web-mode
 
 git-gutter-fringe
+
+migemo
+
+imenus
 
 ;ruby
 ruby-block ruby-electric enh-ruby-mode
@@ -132,11 +134,9 @@ geiser
 (setq dired-recursive-copies 'always)
 ;; diredバッファでC-sした時にファイル名だけにマッチするように
 (setq dired-isearch-filenames t)
-;---------------------------
 
 ;C-hにbackspaceを割当
 (global-set-key "\C-h" 'delete-backward-char)
-
 (setq tab-width 1)
 (setq-default indent-tabs-mode nil)
 ;オートセーブをオフ
@@ -207,10 +207,13 @@ geiser
 (define-key global-map (kbd "C-x f") 'helm-find-files)
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-
+(define-key global-map (kbd "C-c C-s") 'helm-swoop)
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execuate-persistent-action)
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+
+; imenus
+(define-key global-map (kbd "C-c <RET>") 'imenus)
 
