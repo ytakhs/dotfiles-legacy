@@ -8,51 +8,42 @@
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
-auto-complete fuzzy popup pos-tip
-
-dired-toggle
-
-popwin elscreen yascroll buffer-move
-
-flycheck flymake-jslint
-
-go-mode
-
-jedi
-
-helm helm-swoop
-
-magit git-gutter
-
-auto-save-buffers-enhanced
-
-web-mode
-
-git-gutter-fringe
-
-migemo
-
-imenus
-
-;ruby
-ruby-block ruby-electric enh-ruby-mode
-
-;rails
-dash
-projectile-rails
-
-;scala
-ensime
-
-;nginx
-nginx-mode
-
-;lisp
-slime
-geiser
-
-;C, C++
-		
+    auto-complete
+    fuzzy
+    popup
+    pos-tip
+    dired-toggle
+    popwin
+    elscreen
+    yascroll
+    buffer-move
+    flycheck
+    flymake-jslint
+    go-mode
+    jedi
+    helm
+    helm-swoop
+    magit
+    git-gutter
+    auto-save-buffers-enhanced
+    web-mode
+    git-gutter-fringe
+    migemo
+    imenus
+    ;ruby
+    ruby-block
+    ruby-electric
+    enh-ruby-mode
+    ;rails
+    dash
+    projectile-rails
+    ;scala
+    ensime
+    ;nginx
+    nginx-mode
+    ;lisp
+    slime
+    geiser
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
@@ -134,7 +125,6 @@ geiser
 (setq dired-recursive-copies 'always)
 ;; diredバッファでC-sした時にファイル名だけにマッチするように
 (setq dired-isearch-filenames t)
-
 ;C-hにbackspaceを割当
 (global-set-key "\C-h" 'delete-backward-char)
 (setq tab-width 1)
@@ -203,11 +193,12 @@ geiser
 
 ; setting helm
 (helm-mode +1)
-(define-key global-map (kbd "C-x b") 'helm-buffers-list)
-(define-key global-map (kbd "C-x f") 'helm-find-files)
+(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-(define-key global-map (kbd "C-c C-s") 'helm-swoop)
+(define-key global-map (kbd "C-c C-o") 'helm-swoop)
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
@@ -216,4 +207,5 @@ geiser
 
 ; imenus
 (define-key global-map (kbd "C-c <RET>") 'imenus)
+
 
