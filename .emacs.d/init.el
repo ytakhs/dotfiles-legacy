@@ -8,51 +8,49 @@
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
-auto-complete fuzzy popup pos-tip
-
-dired-toggle
-
-popwin elscreen yascroll buffer-move
-
-flycheck flymake-jslint
-
-go-mode
-
-jedi
-
-helm helm-swoop
-
-magit git-gutter
-
-auto-save-buffers-enhanced
-
-web-mode
-
-git-gutter-fringe
-
-migemo
-
-imenus
-
-;ruby
-ruby-block ruby-electric enh-ruby-mode
-
-;rails
-dash
-projectile-rails
-
-;scala
-ensime
-
-;nginx
-nginx-mode
-
-;lisp
-slime
-geiser
-
-;C, C++
-		
+    auto-complete
+    fuzzy
+    popup
+    pos-tip
+    dired-toggle
+    popwin
+    elscreen
+    yascroll
+    buffer-move
+    flycheck
+    flymake-jslint
+    go-mode
+    jedi
+    helm
+    helm-swoop
+    helm-projectile
+    helm-ls-git
+    helm-gtags
+    magit
+    git-gutter
+    auto-save-buffers-enhanced
+    web-mode
+    git-gutter-fringe
+    migemo
+    imenus
+    imenu-anywhere
+    ctags
+    ctags-update
+    gtags
+    ;ruby
+    ruby-block
+    ruby-electric
+    enh-ruby-mode
+    ;rails
+    dash
+    projectile-rails
+    ;scala
+    ensime
+    ;nginx
+    nginx-mode
+    ;lisp
+    slime
+    geiser
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
@@ -102,7 +100,7 @@ geiser
              (setq ruby-deep-indent-paren-style nil)
              (ruby-electric-mode t)
              (setq flycheck-checker 'ruby-rubocop)
-             (flycheck-mode -1)
+             (flycheck-mode t)
              ))
 ; magic-commentのinsertをオフ
 (defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
@@ -134,7 +132,6 @@ geiser
 (setq dired-recursive-copies 'always)
 ;; diredバッファでC-sした時にファイル名だけにマッチするように
 (setq dired-isearch-filenames t)
-
 ;C-hにbackspaceを割当
 (global-set-key "\C-h" 'delete-backward-char)
 (setq tab-width 1)
@@ -203,11 +200,12 @@ geiser
 
 ; setting helm
 (helm-mode +1)
-(define-key global-map (kbd "C-x b") 'helm-buffers-list)
-(define-key global-map (kbd "C-x f") 'helm-find-files)
+(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-(define-key global-map (kbd "C-c C-s") 'helm-swoop)
+(define-key global-map (kbd "C-c C-o") 'helm-swoop)
+(define-key global-map (kbd "C-.") 'helm-etags-select)
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
@@ -216,4 +214,19 @@ geiser
 
 ; imenus
 (define-key global-map (kbd "C-c <RET>") 'imenus)
+
+; ctags-update
+(setq ctags-update-command "/usr/bin/ctags")
+
+; helm-gtags
+(add-hook 'helm-gtags-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "M-t") 'helm-gtags-find-tag)
+             (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
+             (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
+             (local-set-key (kbd "M-l") 'helm-gtags-select)
+             (local-set-key (kbd "M-g") 'helm-gtags-dwim)
+             (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
+(add-hook 'enh-ruby-mode-hook 'helm-gtags-mode)
+
 
