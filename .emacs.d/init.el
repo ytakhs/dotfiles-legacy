@@ -23,6 +23,9 @@
     jedi
     helm
     helm-swoop
+    helm-projectile
+    helm-ls-git
+    helm-gtags
     magit
     git-gutter
     auto-save-buffers-enhanced
@@ -30,6 +33,10 @@
     git-gutter-fringe
     migemo
     imenus
+    imenu-anywhere
+    ctags
+    ctags-update
+    gtags
     ;ruby
     ruby-block
     ruby-electric
@@ -93,7 +100,7 @@
              (setq ruby-deep-indent-paren-style nil)
              (ruby-electric-mode t)
              (setq flycheck-checker 'ruby-rubocop)
-             (flycheck-mode -1)
+             (flycheck-mode t)
              ))
 ; magic-commentのinsertをオフ
 (defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
@@ -195,10 +202,10 @@
 (helm-mode +1)
 (define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
-
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key global-map (kbd "C-c C-o") 'helm-swoop)
+(define-key global-map (kbd "C-.") 'helm-etags-select)
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
@@ -207,5 +214,19 @@
 
 ; imenus
 (define-key global-map (kbd "C-c <RET>") 'imenus)
+
+; ctags-update
+(setq ctags-update-command "/usr/bin/ctags")
+
+; helm-gtags
+(add-hook 'helm-gtags-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "M-t") 'helm-gtags-find-tag)
+             (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
+             (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
+             (local-set-key (kbd "M-l") 'helm-gtags-select)
+             (local-set-key (kbd "M-g") 'helm-gtags-dwim)
+             (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
+(add-hook 'enh-ruby-mode-hook 'helm-gtags-mode)
 
 
