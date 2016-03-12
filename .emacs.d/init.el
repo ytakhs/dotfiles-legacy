@@ -86,6 +86,15 @@
  (setq tab-width 1))
 (add-hook 'web-mode-hook 'web-mode-hook)
 
+; python
+(add-to-list 'auto-mode-alist '("\\.py&" . python-mode ))
+(add-hook 'python-mode-hook
+          '(lambda ()
+            (setq indent-tabs-mode nil)
+            (setq indent-level 4)
+            (setq python-indent 4)
+            (setq tab-width 4)))
+
 ; ruby--------------------------------
 
 (autoload 'enh-ruby-mode "enh-ruby-mode"
