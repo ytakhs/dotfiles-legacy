@@ -236,6 +236,9 @@
              (local-set-key (kbd "M-l") 'helm-gtags-select)
              (local-set-key (kbd "M-g") 'helm-gtags-dwim)
              (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
+(custom-set-variables
+ '(helm-gtags-path-style 'relative))
 (add-hook 'enh-ruby-mode-hook 'helm-gtags-mode)
+(add-hook 'python-mode 'helm-gtags-mode)
 
 
