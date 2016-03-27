@@ -1,0 +1,6 @@
+atom-ctags@4.4.2
+file-icons@1.5.8
+flatland-dark@0.1.6
+rails-snippets@1.10.0
+seti-syntax@0.4.0
+
