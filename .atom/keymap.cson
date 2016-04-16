@@ -28,3 +28,10 @@
   'ctrl-j': 'tree-view:open-selected-entry'
 '.tree-view-dialog atom-text-editor[mini]':
   'ctrl-j': 'core:confirm'
+'body':
+  'ctrl-x 3': 'pane:split-right-and-copy-active-item'
+  'ctrl-x 2': 'pane:split-down-and-copy-active-item'
+  'ctrl-cmd-n': 'window:focus-pane-below'
+  'ctrl-cmd-p': 'window:focus-pane-above'
+  'ctrl-cmd-b':  'window:focus-pane-on-left'
+  'ctrl-cmd-f':  'window:focus-pane-on-right'
