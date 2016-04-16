@@ -1,6 +1,10 @@
-atom-ctags@4.4.2
+atom-ctags
 file-icons@1.5.8
 flatland-dark@0.1.6
+git-history@3.2.0
+merge-conflicts@1.4.1
+rails-open-rspec@1.0.0
 rails-snippets@1.10.0
+railscast-theme@0.3.0
 seti-syntax@0.4.0
 
