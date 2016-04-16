@@ -58,9 +58,9 @@
 ; c
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (setq c-default-style "k&r")
             (setq c-basic-offset 2)
             ))
+(add-hook 'c-mode-common-hook 'flycheck-mode)
 ; c++
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
@@ -85,6 +85,15 @@
  (setq indent-tabs-mode t)
  (setq tab-width 1))
 (add-hook 'web-mode-hook 'web-mode-hook)
+
+; python
+(add-to-list 'auto-mode-alist '("\\.py&" . python-mode ))
+(add-hook 'python-mode-hook
+          '(lambda ()
+            (setq indent-tabs-mode nil)
+            (setq indent-level 4)
+            (setq python-indent 4)
+            (setq tab-width 4)))
 
 ; ruby--------------------------------
 
@@ -227,6 +236,9 @@
              (local-set-key (kbd "M-l") 'helm-gtags-select)
              (local-set-key (kbd "M-g") 'helm-gtags-dwim)
              (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
+(custom-set-variables
+ '(helm-gtags-path-style 'relative))
 (add-hook 'enh-ruby-mode-hook 'helm-gtags-mode)
+(add-hook 'python-mode 'helm-gtags-mode)
 
 
