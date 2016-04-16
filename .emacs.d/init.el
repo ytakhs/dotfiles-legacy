@@ -58,9 +58,9 @@
 ; c
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (setq c-default-style "k&r")
             (setq c-basic-offset 2)
             ))
+(add-hook 'c-mode-common-hook 'flycheck-mode)
 ; c++
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
