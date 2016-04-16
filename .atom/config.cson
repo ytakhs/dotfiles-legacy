@@ -1,0 +1,16 @@
+"*":
+  "atom-ctags": {}
+  "autocomplete-plus": {}
+  core:
+    themes: [
+      "one-dark-ui"
+      "railscast-theme"
+    ]
+  editor:
+    fontSize: 13
+    invisibles: {}
+  "exception-reporting":
+    userId: "90e3877a-ba48-e035-0805-0dd531bb8428"
+  "one-dark-ui": {}
+  welcome:
+    showOnStartup: false
