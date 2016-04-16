@@ -35,3 +35,6 @@
   'ctrl-cmd-p': 'window:focus-pane-above'
   'ctrl-cmd-b':  'window:focus-pane-on-left'
   'ctrl-cmd-f':  'window:focus-pane-on-right'
+'.platform-darwin':
+  'ctrl-cmd-r': 'symbols-view:toggle-project-symbols'
+  'ctrl-j': 'core:confirm'
