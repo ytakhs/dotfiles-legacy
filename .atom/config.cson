@@ -2,9 +2,6 @@
   "atom-ctags": {}
   "autocomplete-plus": {}
   core:
-    disabledPackages: [
-      "symbols-view"
-    ]
     themes: [
       "one-dark-ui"
       "railscast-theme"
