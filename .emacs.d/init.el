@@ -125,7 +125,7 @@
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ; scala----------------------------------
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)         
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (setq ensime-completion-style 'auto-complete)
 
 ; nginx-----------------------------------
@@ -151,9 +151,11 @@
 (setq make-backup-files nil)
 ; 自動インデントオフ
 ;(electric-indent-mode -1)
-; 分割ウィンドウをShift-←↑→↓
-(setq windmove-wrap-around t)
-(windmove-default-keybindings)
+; 分割ウィンドウ
+(global-set-key (kbd "C-c C-b") 'windmove-left)
+(global-set-key (kbd "C-c C-f") 'windmove-right)
+(global-set-key (kbd "C-c C-p") 'windmove-up)
+(global-set-key (kbd "C-c C-n") 'windmove-down)
 ; beepをオフ
 (setq ring-bell-function 'ignore)
 ; localeに合わせた環境設定
@@ -240,5 +242,3 @@
  '(helm-gtags-path-style 'relative))
 (add-hook 'enh-ruby-mode-hook 'helm-gtags-mode)
 (add-hook 'python-mode 'helm-gtags-mode)
-
-
