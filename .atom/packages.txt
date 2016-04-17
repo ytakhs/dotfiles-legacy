@@ -2,6 +2,9 @@ atom-ctags
 file-icons@1.5.8
 flatland-dark@0.1.6
 git-history@3.2.0
+linter@1.11.4
+linter-rubocop@0.4.7
+linter-ruby@1.2.2
 merge-conflicts@1.4.1
 rails-open-rspec@1.0.0
 rails-snippets@1.10.0

@@ -7,10 +7,12 @@
       "railscast-theme"
     ]
   editor:
-    fontSize: 13
+    fontSize: 11
     invisibles: {}
   "exception-reporting":
     userId: "90e3877a-ba48-e035-0805-0dd531bb8428"
+  "linter-rubocop":
+    command: "/Users/UG/.rbenv/versions/2.3.0/bin/rubocop"
   "one-dark-ui": {}
   welcome:
     showOnStartup: false
