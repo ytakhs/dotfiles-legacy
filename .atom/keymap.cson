@@ -38,3 +38,8 @@
 '.platform-darwin':
   'ctrl-cmd-r': 'symbols-view:toggle-project-symbols'
   'ctrl-j': 'core:confirm'
+  'ctrl-cmd-p': 'native!'
+  'ctrl-alt-p': 'project-manager:list-projects'
+'.platform-darwin atom-workspace':
+  'alt-cmd-o': 'unset!'
+  'ctrl-cmd-o': 'advanced-open-file:toggle'
