@@ -2,8 +2,9 @@
 .node-gyp
 blob-store
 compile-cache
-packages
-storage
+packages/
+storage/
+projects.cson
 
 dev
 .npm
