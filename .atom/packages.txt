@@ -1,8 +1,7 @@
 advanced-open-file@0.15.0
-atom-ctags
 file-icons@1.5.8
-flatland-dark@0.1.6
 git-history@3.2.0
+language-slim@0.5.0
 linter@1.11.4
 linter-rubocop@0.4.7
 linter-ruby@1.2.2
@@ -10,6 +9,5 @@ merge-conflicts@1.4.1
 project-manager@2.9.7
 rails-snippets@1.10.0
 railscast-theme@0.3.0
-seti-syntax@0.4.0
 
 
