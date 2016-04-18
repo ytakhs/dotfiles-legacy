@@ -2,12 +2,8 @@
   "advanced-open-file":
     createDirectories: true
     createFileInstantly: true
-  "atom-ctags": {}
   "autocomplete-plus": {}
   core:
-    disabledPackages: [
-      "atom-ctags"
-    ]
     themes: [
       "one-dark-ui"
       "railscast-theme"
