@@ -38,6 +38,8 @@
   'ctrl-c ctrl-b':  'window:focus-pane-on-left'
   'ctrl-c ctrl-f':  'window:focus-pane-on-right'
   'ctrl-q': 'core:cancel'
+  'ctrl-alt-p': 'core:move-to-top'
+  'ctrl-alt-n': 'core:move-to-bottom'
 '.platform-darwin':
   'ctrl-cmd-r': 'symbols-view:toggle-project-symbols'
   'ctrl-j': 'core:confirm'
@@ -45,3 +47,10 @@
   'alt-cmd-o': 'unset!'
   'ctrl-cmd-o': 'advanced-open-file:toggle'
   'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+'atom-text-editor':
+  'ctrl-alt-shift-B': 'native!'
+  'ctrl-alt-shift-B': 'editor:select-to-first-character-of-line'
+  'ctrl-cmd-shift-B': 'editor:select-to-first-character-of-line'
+  'ctrl-alt-shift-F': 'native!'
+  'ctrl-alt-shift-F': 'editor:select-to-end-of-line'
+  'ctrl-cmd-shift-F': 'editor:select-to-end-of-line'
