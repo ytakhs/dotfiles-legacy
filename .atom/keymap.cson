@@ -54,3 +54,5 @@
   'ctrl-alt-shift-F': 'native!'
   'ctrl-alt-shift-F': 'editor:select-to-end-of-line'
   'ctrl-cmd-shift-F': 'editor:select-to-end-of-line'
+  'ctrl-k': 'native!'
+  'ctrl-k': 'editor:delete-to-end-of-line'
