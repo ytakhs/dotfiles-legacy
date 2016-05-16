@@ -4,6 +4,9 @@
     createFileInstantly: true
   "autocomplete-plus": {}
   core:
+    disabledPackages: [
+      "linter-erb"
+    ]
     themes: [
       "one-dark-ui"
       "railscast-theme"
