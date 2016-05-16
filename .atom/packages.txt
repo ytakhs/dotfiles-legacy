@@ -1,13 +1,17 @@
 advanced-open-file@0.15.0
+atom-erb@0.2.0
+erb-snippets@1.1.0
 file-icons@1.5.8
 git-history@3.2.0
+language-gitignore@0.2.0
 language-slim@0.5.0
 linter@1.11.4
+linter-erb@1.0.2
 linter-rubocop@0.4.7
 linter-ruby@1.2.2
 merge-conflicts@1.4.1
 project-manager@2.9.7
-rails-snippets@1.10.0
 railscast-theme@0.3.0
+tag@0.4.0
 
 
