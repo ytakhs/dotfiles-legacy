@@ -6,9 +6,10 @@
   core:
     disabledPackages: [
       "linter-erb"
+      "linter-rails-best-practices"
     ]
     themes: [
-      "one-dark-ui"
+      "nucleus-dark-ui"
       "railscast-theme"
     ]
   editor:
