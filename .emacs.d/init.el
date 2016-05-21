@@ -8,6 +8,7 @@
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
+    afternoon-theme
     auto-complete
     fuzzy
     popup
@@ -55,10 +56,11 @@
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
     (package-install package)))
+(load-theme 'afternoon t)
 ; c
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (setq c-basic-offset 2)
+            (setq c-basic-offset 4)
             ))
 (add-hook 'c-mode-common-hook 'flycheck-mode)
 ; c++
@@ -153,7 +155,9 @@
 ;(electric-indent-mode -1)
 ; 分割ウィンドウ
 (global-set-key (kbd "C-c C-b") 'windmove-left)
+(global-set-key (kbd "C-c b") 'windmove-left)
 (global-set-key (kbd "C-c C-f") 'windmove-right)
+(global-set-key (kbd "C-c f") 'windmove-right)
 (global-set-key (kbd "C-c C-p") 'windmove-up)
 (global-set-key (kbd "C-c C-n") 'windmove-down)
 ; beepをオフ
@@ -222,7 +226,6 @@
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execuate-persistent-action)
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-
 ; imenus
 (define-key global-map (kbd "C-c <RET>") 'imenus)
 
