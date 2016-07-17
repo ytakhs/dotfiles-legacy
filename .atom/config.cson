@@ -8,17 +8,15 @@
     disabledPackages: [
       "linter-erb"
       "linter-rails-best-practices"
-    ]
-    themes: [
-      "seti-ui"
-      "seti-syntax"
+      "linter-rubocop"
     ]
   editor:
-    fontSize: 11
+    fontSize: 10
     invisibles: {}
   "exception-reporting":
     userId: "90e3877a-ba48-e035-0805-0dd531bb8428"
-  linter: {}
+  linter:
+    showErrorPanel: false
   "linter-rubocop":
     command: "/Users/UG/.rbenv/versions/2.3.0/bin/rubocop"
   "one-dark-ui": {}
