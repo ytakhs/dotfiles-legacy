@@ -1,4 +1,6 @@
 "*":
+  Ensime:
+    sbtExec: "/usr/local/bin/sbt"
   "advanced-open-file":
     createDirectories: true
     createFileInstantly: true
