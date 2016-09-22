@@ -4,13 +4,28 @@
   "advanced-open-file":
     createDirectories: true
     createFileInstantly: true
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 0
+        green: 92
+        blue: 83
+        alpha: 1
+      paintCursor: true
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      animations: false
+      panelContrast: true
+      panelShadows: true
   "autocomplete-plus": {}
   core:
     audioBeep: false
-    disabledPackages: [
-      "linter-erb"
-      "linter-rails-best-practices"
-      "linter-rubocop"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
     ]
   editor:
     fontSize: 10
@@ -18,6 +33,7 @@
   "exception-reporting":
     userId: "90e3877a-ba48-e035-0805-0dd531bb8428"
   linter:
+    displayLinterInfo: false
     showErrorPanel: false
   "linter-rubocop":
     command: "/Users/UG/.rbenv/versions/2.3.0/bin/rubocop"
@@ -26,5 +42,6 @@
     compactView: true
     disableAnimations: true
     themeColor: "Steel"
+  "symbols-tree-view": {}
   welcome:
     showOnStartup: false
