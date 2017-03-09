@@ -11,6 +11,7 @@ set -g theme_color_scheme solarized-dark
 function peco
   command peco --layout=bottom-up $argv
 end
+
 function peco-git-checkout
   git branch -a | peco | tr -d ' ' | read branch
   echo $branch
@@ -25,4 +26,6 @@ function peco-git-checkout
   commandline -f repaint
 end
 
-bind \cx\cr peco-git-checkout
+function fish_user_key_bindings
+  bind \cx\cf peco-git-checkout
+end
