@@ -28,4 +28,5 @@ end
 
 function fish_user_key_bindings
   bind \cx\cf peco-git-checkout
+  bind \cr peco_select_history
 end
