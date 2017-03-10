@@ -12,7 +12,7 @@ function peco
   command peco --layout=bottom-up $argv
 end
 
-function peco-git-checkout
+function peco_git_checkout
   git branch -a | peco | tr -d ' ' | read branch
   echo $branch
   if [ $branch ]
@@ -26,7 +26,17 @@ function peco-git-checkout
   commandline -f repaint
 end
 
+function peco_select_ghq_repo
+  ghq list | peco | read repo
+  if [ $repo ]
+    ghq root | read ghq_dir
+    cd $ghq_dir/$repo
+  end
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
-  bind \cx\cf peco-git-checkout
+  bind \cx\cf peco_git_checkout
   bind \cr peco_select_history
+  bind \cg peco_select_ghq_repo
 end
