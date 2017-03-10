@@ -21,6 +21,7 @@
     audioBeep: false
     disabledPackages: [
       "linter-rubocop"
+      "language-gfm"
     ]
     themes: [
       "atom-material-ui"
