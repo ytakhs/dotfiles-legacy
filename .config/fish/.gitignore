@@ -1,3 +1,4 @@
 conf.d
 functions
 fishd.*
+/completions/asdf.fish
