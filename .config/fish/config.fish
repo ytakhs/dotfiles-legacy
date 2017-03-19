@@ -20,8 +20,8 @@ function peco_git_checkout
   git branch -a | peco | tr -d ' ' | read branch
   echo $branch
   if [ $branch ]
-    if contains $branch "remotes/"
-      set -l b (echo $branch | awk -F'/' '{print $3}')
+    if string match -r "remotes\/" $branch > /dev/null
+      set -l b (string replace -r 'remotes/origin/(.*)' '$1' $branch)
       git checkout -b $b $branch
     else
       git checkout $branch

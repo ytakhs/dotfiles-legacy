@@ -25,7 +25,7 @@
     ]
     themes: [
       "atom-material-ui"
-      "atom-material-syntax"
+      "one-dark-syntax"
     ]
   editor:
     fontSize: 10
