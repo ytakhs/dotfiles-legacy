@@ -54,3 +54,7 @@ function fish_user_key_bindings
   bind \cg peco_select_ghq_repo
   bind \cs peco_source_search
 end
+
+function curlb
+  curl -s -o /dev/null -w 'total: %{time_total}\nstarttransfer: %{time_starttransfer}\n' $argv
+end
