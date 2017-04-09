@@ -2,6 +2,7 @@
   'ctrl-j': 'tree-view:open-selected-entry'
 '.tree-view-dialog atom-text-editor[mini]':
   'ctrl-j': 'core:confirm'
+  'ctrl-c': 'core:cancel'
 'body':
   'ctrl-x 3': 'pane:split-right-and-copy-active-item'
   'ctrl-x ctrl-3': 'pane:split-right-and-copy-active-item'

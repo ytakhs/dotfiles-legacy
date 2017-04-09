@@ -1,6 +1,4 @@
 "*":
-  Ensime:
-    sbtExec: "/usr/local/bin/sbt"
   "advanced-open-file":
     createDirectories: true
     createFileInstantly: true
@@ -21,8 +19,8 @@
     audioBeep: false
     disabledPackages: [
       "linter-rubocop"
-      "language-gfm"
     ]
+    excludeVcsIgnoredPaths: true
     themes: [
       "atom-material-ui"
       "one-dark-syntax"
@@ -43,5 +41,7 @@
     disableAnimations: true
     themeColor: "Steel"
   "symbols-tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
