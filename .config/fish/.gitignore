@@ -1,4 +1,11 @@
 conf.d
-functions
-fishd.*
+functions/*
 /completions/asdf.fish
+fishd.*
+!functions/curlb.fish
+!functions/peco.fish
+!functions/peco_git_checkout.fish
+!functions/peco_select_ghq_repo.fish
+!functions/peco_source_search.fish
+!functions/pero.fish
+!functions/gvm.fish
