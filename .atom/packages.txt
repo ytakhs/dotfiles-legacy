@@ -2,6 +2,7 @@ advanced-open-file@0.16.4
 atom-erb@0.2.0
 atom-material-syntax@0.4.6
 atom-material-ui@1.3.6
+editorconfig@2.2.2
 erb-helper@1.0.1
 file-icons@1.7.19
 language-docker@1.1.7
@@ -16,7 +17,6 @@ linter@1.11.16
 linter-elixir-credo@1.1.0
 linter-elixirc@1.1.11
 linter-eslint@8.0.0
-linter-flow@5.5.0
 linter-rubocop@0.4.7
 linter-ruby@1.2.2
 react@0.16.2
