@@ -38,6 +38,9 @@ end
 # opam
 if which opam > /dev/null 2>&1; and [ -d ~/.opam ]
   source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+  if which rlwrap > /dev/null 2>&1
+    alias ocaml="rlwrap ocaml"
+  end
 else
   echo "opam is not installed"
 end
