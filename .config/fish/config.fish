@@ -35,6 +35,13 @@ else
   echo "goenv is not installed"
 end
 
+# opam
+if which opam > /dev/null 2>&1; and [ -d ~/.opam ]
+  source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+else
+  echo "opam is not installed"
+end
+
 # bobthefish
 set -g theme_display_date no
 set -g theme_color_scheme solarized-dark
