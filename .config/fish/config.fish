@@ -45,6 +45,18 @@ else
   echo "opam is not installed"
 end
 
+if [ -d ~/google-cloud-sdk ]
+  source ~/google-cloud-sdk/path.fish.inc
+else
+  echo "google cloud sdk is not installed"
+end
+
+if [ -d ~/erlang/19.3/ ]
+  source ~/erlang/19.3/activate.fish
+else
+  echo "kerl is not installed"
+end
+
 # bobthefish
 set -g theme_display_date no
 set -g theme_color_scheme solarized-dark
