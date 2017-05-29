@@ -26,3 +26,8 @@ $ ln -sf ~/dotfiles/.ocamlinit ~/
 1 set -gx PATH ~/.opam/system/bin $PATH;
 4 set -gx MANPATH "$MANPATH" ~/.opam/system/man;
 ```
+
+## Google Cloud SDK
+```console
+$ curl https://sdk.cloud.google.com | bash
+```
