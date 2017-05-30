@@ -1,0 +1,12 @@
+{
+    "editor.fontSize": 10,
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.cursorStyle": "line-thin",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.editor.enablePreview": false,
+    "newFile.defaultFileExtension": "",
+    "newFile.defaultBaseFileName": "/"
+}
