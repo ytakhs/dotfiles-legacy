@@ -13,8 +13,10 @@
   'ctrl-c ctrl-b':  'window:focus-pane-on-left'
   'ctrl-c ctrl-f':  'window:focus-pane-on-right'
   'ctrl-q': 'core:cancel'
-  'ctrl-alt-p': 'core:move-to-top'
-  'ctrl-alt-n': 'core:move-to-bottom'
+  'ctrl-cmd-p': 'core:move-to-top'
+  'ctrl-cmd-n': 'core:move-to-bottom'
+  'ctrl-shift-cmd-p': 'core:select-to-top'
+  'ctrl-shift-cmd-n': 'core:select-to-bottom'
 '.platform-darwin':
   'ctrl-cmd-r': 'symbols-view:toggle-project-symbols'
   'ctrl-j': 'core:confirm'
@@ -22,5 +24,8 @@
   'alt-cmd-o': 'unset!'
   'ctrl-cmd-o': 'advanced-open-file:toggle'
   'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+'.platform-darwin atom-text-editor:not(mini)':
+  'alt-p': 'multi-cursor:expandUp'
+  'alt-n': 'multi-cursor:expandDown'
 'atom-text-editor':
   'ctrl-k': 'editor:delete-to-end-of-line'
