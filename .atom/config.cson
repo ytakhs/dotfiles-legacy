@@ -5,7 +5,6 @@
   "atom-material-ui":
     colors:
       abaseColor: "#005c53"
-      paintCursor: true
     fonts: {}
     tabs:
       compactTabs: true
@@ -23,10 +22,9 @@
       "linter-rubocop"
       "language-gfm"
     ]
-    excludeVcsIgnoredPaths: true
     themes: [
-      "atom-material-ui"
-      "one-dark-syntax"
+      "one-dark-ui"
+      "ariake-dark-syntax"
     ]
   editor:
     fontSize: 10
@@ -36,7 +34,11 @@
   linter: {}
   "linter-rubocop":
     command: "/Users/UG/.rbenv/versions/2.3.0/bin/rubocop"
-  "one-dark-ui": {}
+  "nord-atom-ui":
+    tabSizing: false
+  "one-dark-ui":
+    fontSize: 12
+    tabSizing: "Minimum"
   "seti-ui":
     compactView: true
     disableAnimations: true
