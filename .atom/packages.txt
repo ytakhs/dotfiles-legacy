@@ -1,7 +1,7 @@
 advanced-open-file@0.16.6
 atom-erb@0.2.0
 atom-material-syntax@1.0.6
-atom-material-ui@1.3.10
+atom-material-ui@2.0.4
 busy-signal@1.4.1
 editorconfig@2.2.2
 erb-helper@1.1.0
