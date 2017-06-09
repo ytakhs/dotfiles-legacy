@@ -6,8 +6,8 @@ colors = {
 }
 Pry.config.prompt = proc do |obj, nest_level, _pry_|
   version = ''
-  version << colors[:light_red] << "[Ruby:#{RUBY_VERSION}]" << colors[:white]
-  version << colors[:red] << "[Rails:#{Rails.version}]" << colors[:white] if defined?(Rails)
+  version << colors[:red] << "[Ruby:#{RUBY_VERSION}]" << colors[:white]
+  version << colors[:light_red] << "[Rails:#{Rails.version}]" << colors[:white] if defined?(Rails)
   "#{version} #{Pry.config.prompt_name}(#{Pry.view_clip(obj)})> "
 end
 
