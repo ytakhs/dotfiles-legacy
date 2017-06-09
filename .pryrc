@@ -1,26 +1,19 @@
-begin
-  require 'hirb'
-rescue LoadError
-  puts 'no hirb'
-end
-
-begin
-  require 'awesome_print'
-rescue LoadError
-  puts 'no awesome_print'
-end
-
-prompt_config = lambda {
+pry_config = lambda {
   colors = {
     white: "\001\e[0m\002",
     red: "\001\e[0;31m\002",
     light_red: "\001\e[1;31m\002"
   }
+
   Pry.config.prompt = proc do |obj, _nest_level, _pry_|
     version = ''
     version << colors[:red] << "[Ruby:#{RUBY_VERSION}]" << colors[:white]
     version << colors[:light_red] << "[Rails:#{Rails.version}]" << colors[:white] if defined?(Rails)
     "#{version} #{Pry.config.prompt_name}(#{Pry.view_clip(obj)})> "
+  end
+
+  Pry::Commands.command(/^$/, 'repeat last command') do
+    _pry_.run_command Pry.history.to_a.last
   end
 }
 
@@ -53,11 +46,19 @@ byebug_config = lambda {
   Pry.commands.alias_command 'c', 'continue'
 }
 
-Pry::Commands.command(/^$/, 'repeat last command') do
-  _pry_.run_command Pry.history.to_a.last
+begin
+  require 'hirb'
+  hirb_config.call
+rescue LoadError
+  puts 'no hirb'
 end
 
-prompt_config.call
+begin
+  require 'awesome_print'
+  awesome_print_config.call
+rescue LoadError
+  puts 'no awesome_print'
+end
+
+pry_config.call
 byebug_config.call if defined?(PryByebug)
-awesome_print_config.call if defined?(AwesomePrint)
-hirb_config.call if defined?(Hirb)
