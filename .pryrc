@@ -47,17 +47,17 @@ byebug_config = lambda {
 }
 
 begin
-  require 'hirb'
-  hirb_config.call
-rescue LoadError
-  puts 'no hirb'
-end
-
-begin
   require 'awesome_print'
   awesome_print_config.call
 rescue LoadError
   puts 'no awesome_print'
+end
+
+begin
+  require 'hirb'
+  hirb_config.call
+rescue LoadError
+  puts 'no hirb'
 end
 
 pry_config.call
