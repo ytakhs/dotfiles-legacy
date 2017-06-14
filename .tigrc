@@ -1,0 +1,16 @@
+# visual settings
+set main-view = id date author commit-title:graph=yes,refs=yes
+set diff-context = 5
+set vertical-split = yes
+
+# diff-highlight
+set diff-highlight = true
+color diff-header default magenta
+color diff-chunk black white
+
+# keybindings
+## fetch
+bind generic F ?git fetch %(remote)
+bind main F ?git fetch %(remote)
+## push
+bind generic P ?git push -u %(remote) %(repo:head)

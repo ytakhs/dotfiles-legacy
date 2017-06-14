@@ -58,6 +58,12 @@ else
   echo "google-cloud-sdk is not installed"
 end
 
+if [ -d "/usr/local/share/git-core/contrib/diff-highlight" ]
+  set -x PATH "/usr/local/share/git-core/contrib/diff-highlight" $PATH
+else
+  echo "no diff-highlight"
+end
+
 # bobthefish
 set -g theme_display_date no
 set -g theme_color_scheme solarized-dark
