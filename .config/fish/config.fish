@@ -47,6 +47,18 @@ else
   echo "opam is not installed"
 end
 
+# python
+if which pyenv > /dev/null
+  status --is-interactive; and source (pyenv init -|psub)
+  if which pyenv-virtualenv-init > /dev/null
+    status --is-interactive; and source (pyenv virtualenv-init -|psub)
+  else
+    echo 'no pyenv-virtualenv :('
+  end
+else
+  echo 'no pyenv :('
+end
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f ~/google-cloud-sdk/path.fish.inc ]
   if type source > /dev/null
