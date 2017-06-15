@@ -10,7 +10,7 @@ color diff-chunk black white
 
 # keybindings
 ## fetch
-bind generic F ?git fetch %(remote)
-bind main F ?git fetch %(remote)
+bind generic F ?git fetch %(prompt Enter remote name: )
+bind main F ?git fetch %(prompt Enter remote name: )
 ## push
-bind generic P ?git push -u %(remote) %(repo:head)
+bind generic P ?git push -u %(prompt Enter remote name: ) %(repo:head)
