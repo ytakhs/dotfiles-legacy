@@ -44,7 +44,6 @@
     disableAnimations: true
     themeColor: "Steel"
   "symbols-tree-view": {}
-  "tree-view":
-    hideVcsIgnoredFiles: false
+  "tree-view": {}
   welcome:
     showOnStartup: false
