@@ -3,6 +3,6 @@ function chrome
     case Darwin
       eval '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome' $argv
     case '*'
-      echo ""
+      echo "not supported :("
     end
 end
