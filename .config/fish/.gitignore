@@ -8,3 +8,4 @@ fishd.*
 !functions/peco_select_ghq_repo.fish
 !functions/peco_source_search.fish
 !functions/pero.fish
+!functions/chrome.fish
