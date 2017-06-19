@@ -9,3 +9,4 @@ fishd.*
 !functions/peco_source_search.fish
 !functions/pero.fish
 !functions/chrome.fish
+!functions/chrome-canary.fish
