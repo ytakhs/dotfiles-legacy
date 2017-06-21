@@ -1,144 +1,16 @@
 (require 'package)
-; package------------------------------
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-
 (package-initialize)
-
 (package-refresh-contents)
 (defvar my/favorite-packages
   '(
     afternoon-theme
-    auto-complete
-    fuzzy
-    popup
-    pos-tip
-    dired-toggle
-    popwin
-    elscreen
-    yascroll
-    buffer-move
-    flycheck
-    flymake-jslint
-    go-mode
-    jedi
-    helm
-    helm-swoop
-    helm-projectile
-    helm-ls-git
-    helm-gtags
-    magit
-    git-gutter
-    auto-save-buffers-enhanced
-    web-mode
-    git-gutter-fringe
-    migemo
-    imenus
-    imenu-anywhere
-    ctags
-    ctags-update
-    gtags
-    ;ruby
-    ruby-block
-    ruby-electric
-    enh-ruby-mode
-    ;rails
-    dash
-    projectile-rails
-    ;scala
-    ensime
-    ;nginx
-    nginx-mode
-    ;lisp
-    slime
-    geiser
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
     (package-install package)))
 (load-theme 'afternoon t)
-; c
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (setq c-basic-offset 4)
-            ))
-(add-hook 'c-mode-common-hook 'flycheck-mode)
-; c++
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-; auto-save-buffers-enhanced--------
-
-(auto-save-buffers-enhanced t)
-
-; web-mode
-;; 拡張子の設定
-(add-to-list 'auto-mode-alist '("\\.phtml$"     . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp$"       . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x$"   . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb$"       . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
-;; インデント関係
-(defun web-mode-hook ()
-  "Hooks for Web mode."
- (setq web-mode-markup-indent-offset   2)
- (setq web-mode-css-indent-offset    2)
-	(setq web-mode-code-indent-offset 2)
- (setq indent-tabs-mode t)
- (setq tab-width 1))
-(add-hook 'web-mode-hook 'web-mode-hook)
-
-; python
-(add-to-list 'auto-mode-alist '("\\.py&" . python-mode ))
-(add-hook 'python-mode-hook
-          '(lambda ()
-            (setq indent-tabs-mode nil)
-            (setq indent-level 4)
-            (setq python-indent 4)
-            (setq tab-width 4)))
-
-; ruby--------------------------------
-
-(autoload 'enh-ruby-mode "enh-ruby-mode"
-  "Mode for editing ruby source files" t)
-(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" .enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
-(add-hook 'enh-ruby-mode-hook
-          '(lambda ()
-             (setq tab-width 2)
-             (setq ruby-indent-level tab-width)
-             (setq ruby-deep-indent-paren-style nil)
-             (ruby-electric-mode t)
-             (setq flycheck-checker 'ruby-rubocop)
-             (flycheck-mode t)
-             ))
-; magic-commentのinsertをオフ
-(defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
-  "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
-  (if (and (boundp 'enh-ruby-not-insert-magic-comment)
-           (not enh-ruby-not-insert-magic-comment))
-      ad-do-it))
-(ad-activate 'enh-ruby-mode-set-encoding)
-(setq-default enh-ruby-not-insert-magic-comment t)
-
-; rails---------------------------------
-(projectile-global-mode)
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
-
-; scala----------------------------------
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-(setq ensime-completion-style 'auto-complete)
-
-; nginx-----------------------------------
-(add-to-list 'auto-mode-alist '("nginx\\(.*\\).conf[^/]*$" . nginx-mode))
-
-; git-gutter-fringe
-(global-git-gutter-mode t)
-
-; ファイラ"dired"-------------
-;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
-(setq dired-dwim-target t)
 ;; ディレクトリを再帰的にコピーする
 (setq dired-recursive-copies 'always)
 ;; diredバッファでC-sした時にファイル名だけにマッチするように
@@ -211,37 +83,3 @@
                    )
                   default-frame-alist)
           ))
-
-
-; setting helm
-(helm-mode +1)
-(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
-(define-key global-map (kbd "C-x C-f") 'helm-find-files)
-(define-key global-map (kbd "M-x") 'helm-M-x)
-(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-(define-key global-map (kbd "C-c C-o") 'helm-swoop)
-(define-key global-map (kbd "C-.") 'helm-etags-select)
-(define-key helm-map (kbd "C-h") 'delete-backward-char)
-(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
-(define-key helm-find-files-map (kbd "TAB") 'helm-execuate-persistent-action)
-(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-; imenus
-(define-key global-map (kbd "C-c <RET>") 'imenus)
-
-; ctags-update
-(setq ctags-update-command "/usr/bin/ctags")
-
-; helm-gtags
-(add-hook 'helm-gtags-mode-hook
-          '(lambda ()
-             (local-set-key (kbd "M-t") 'helm-gtags-find-tag)
-             (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
-             (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
-             (local-set-key (kbd "M-l") 'helm-gtags-select)
-             (local-set-key (kbd "M-g") 'helm-gtags-dwim)
-             (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
-(custom-set-variables
- '(helm-gtags-path-style 'relative))
-(add-hook 'enh-ruby-mode-hook 'helm-gtags-mode)
-(add-hook 'python-mode 'helm-gtags-mode)
