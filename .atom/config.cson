@@ -19,9 +19,9 @@
   core:
     audioBeep: false
     disabledPackages: [
-      "linter-rubocop"
       "language-gfm"
     ]
+    excludeVcsIgnoredPaths: false
     themes: [
       "one-dark-ui"
       "ariake-dark-syntax"
@@ -33,7 +33,10 @@
     userId: "90e3877a-ba48-e035-0805-0dd531bb8428"
   linter: {}
   "linter-rubocop":
-    command: "/Users/UG/.rbenv/versions/2.3.0/bin/rubocop"
+    executablePath: "~/.rbenv/shims/rubocop"
+  "linter-ui-default":
+    panelHeight: 68
+    showPanel: true
   "nord-atom-ui":
     tabSizing: false
   "one-dark-ui":
