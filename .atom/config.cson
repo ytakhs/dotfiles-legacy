@@ -21,7 +21,6 @@
     disabledPackages: [
       "language-gfm"
     ]
-    excludeVcsIgnoredPaths: false
     themes: [
       "one-dark-ui"
       "ariake-dark-syntax"
