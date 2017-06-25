@@ -36,6 +36,7 @@ else
 end
 set -x GOPATH $HOME/dev
 set -x PATH $GOPATH/bin $PATH
+set -x GHQ_ROOT $GOPATH/.ghq/
 
 # ocaml
 if which opam > /dev/null 2>&1; and [ -d ~/.opam ]
@@ -87,3 +88,9 @@ function fish_user_key_bindings
   bind \cg peco_select_ghq_repo
   bind \cs peco_source_search
 end
+#
+# if which conda > /dev/null 2>&1 ;
+#   source (conda info --root)/etc/fish/conf.d/conda.fish
+# else
+#   echo "no conda :("
+# end

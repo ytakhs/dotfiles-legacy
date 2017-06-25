@@ -1,0 +1,11 @@
+[user]
+	name = Yuji Takahashi
+	email = jit.y.31@gmail.com
+[url "github:"]
+  InsteadOf = https://github.com/
+  InsteadOf = git@github.com:
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = /usr/local/bin/vim
+[credential]
+	helper = gcloud.sh
