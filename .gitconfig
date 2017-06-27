@@ -1,5 +1,5 @@
 [user]
-	name = YUJI Takahashi
+	name = YUJI takahashi
 	email = jit.y.31@gmail.com
 [url "github:"]
   InsteadOf = https://github.com/
@@ -13,3 +13,8 @@
   log = diff-highlight | less
   show = diff-highlight | less
   diff = diff-highlight | less
+[alias]
+	st = status
+	br = branch
+	co = checkout
+	cm = commit -m
