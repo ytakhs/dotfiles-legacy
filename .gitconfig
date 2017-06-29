@@ -7,6 +7,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = /usr/local/bin/vim
+	pager = less -FRSX
 [credential]
 	helper = gcloud.sh
 [pager]
