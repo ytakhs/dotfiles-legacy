@@ -22,7 +22,7 @@ end
 # ruby
 if which rbenv > /dev/null 2>&1 ;and [ -d "$HOME/.rbenv" ]
   set -x PATH $HOME/.rbenv/shims $PATH
-  rbenv init - | source
+  status --is-interactive; and source (rbenv init -|psub)
 else
   echo "rbenv is not installed."
 end
