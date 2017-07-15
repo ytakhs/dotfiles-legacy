@@ -29,7 +29,7 @@ end
 
 # rust
 if [ -f ~/.cargo/env ]
-  source $HOME/.cargo/env
+  set -x PATH $HOME/.cargo/bin $PATH
 else
   echo "no cargo:("
 end
