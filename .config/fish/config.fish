@@ -28,7 +28,7 @@ else
 end
 
 # rust
-if [ -d ~/.cargo/env ]
+if [ -f ~/.cargo/env ]
   source $HOME/.cargo/env
 else
   echo "no cargo:("
