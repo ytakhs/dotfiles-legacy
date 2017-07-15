@@ -2,21 +2,21 @@
 if [ -d "$HOME/.nodebrew" ]
   set -x PATH $HOME/.nodebrew/current/bin $PATH
 else
-  echo "nodebrew is not installed"
+  echo "no nodebrew:("
 end
 
 # erlang
-if [ -d ~/erlang/19.3/ ]
-  source ~/erlang/19.3/activate.fish
+if [ -d ~/erlang/20.0/ ]
+  source ~/erlang/20.0/activate.fish
 else
-  echo "kerl is not installed"
+  echo "no kerl:("
 end
 
 # elixir
 if which exenv > /dev/null 2>&1 ;and [ -d "$HOME/.exenv" ]
   set -x PATH $HOME/.exenv/shims $PATH
 else
-  echo "exenv is not installed"
+  echo "no exenv:("
 end
 
 # ruby
@@ -24,7 +24,14 @@ if which rbenv > /dev/null 2>&1 ;and [ -d "$HOME/.rbenv" ]
   set -x PATH $HOME/.rbenv/shims $PATH
   status --is-interactive; and source (rbenv init -|psub)
 else
-  echo "rbenv is not installed."
+  echo "no rbenv:("
+end
+
+# rust
+if [ -d ~/.cargo/env ]
+  source $HOME/.cargo/env
+else
+  echo "no cargo:("
 end
 
 # go
@@ -32,7 +39,7 @@ if which goenv > /dev/null 2>&1 ;and [ -d "$HOME/.goenv" ]
   set -x PATH $HOME/.goenv/shims $PATH
   goenv init - | source
 else
-  echo "goenv is not installed"
+  echo "no goenv:("
 end
 set -x GOPATH $HOME/dev
 set -x PATH $GOPATH/bin $PATH
@@ -45,7 +52,7 @@ if which opam > /dev/null 2>&1; and [ -d ~/.opam ]
     alias ocaml="rlwrap ocaml"
   end
 else
-  echo "opam is not installed"
+  echo "no opam:("
 end
 
 # python
@@ -68,7 +75,7 @@ if [ -f ~/google-cloud-sdk/path.fish.inc ]
     . ~/google-cloud-sdk/path.fish.inc
   end;
 else
-  echo "google-cloud-sdk is not installed"
+  echo "no google-cloud-sdk:("
 end
 
 if [ -d "/usr/local/share/git-core/contrib/diff-highlight" ]
