@@ -35,7 +35,6 @@
     executablePath: "~/.rbenv/shims/rubocop"
   "linter-ui-default":
     panelHeight: 68
-    showPanel: false
   "nord-atom-ui":
     tabSizing: false
   "one-dark-ui":

@@ -8,6 +8,7 @@ end
 # erlang
 if [ -d ~/erlang/20.0/ ]
   source ~/erlang/20.0/activate.fish
+  set -x ERL_AFLAGS "-kernel shell_history enabled"
 else
   echo "no kerl:("
 end
