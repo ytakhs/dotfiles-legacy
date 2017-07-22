@@ -4,13 +4,14 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = /usr/local/bin/vim
-	pager = less -FRSX
+	pager = less -+$LESS -R
 [credential]
 	helper = gcloud.sh
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+  log = diff-highlight | less -+$LESS -R
+  show = diff-highlight | less -+$LESS -R
+  diff = diff-highlight | less -+$LESS -R
+	blame = diff-highlight | less -+$LESS -R
 [alias]
 	st = status
 	br = branch
