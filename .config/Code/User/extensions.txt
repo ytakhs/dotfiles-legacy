@@ -6,6 +6,8 @@ codezombiech.gitignore
 dkundel.vscode-new-file
 hackwaly.ocaml
 iampeterbanjo.elixirlinter
+kalitaalexey.vscode-rust
 mjmcloug.vscode-elixir
 pgourlain.erlang
 rebornix.Ruby
+robertohuertasm.vscode-icons
