@@ -1,0 +1,11 @@
+NigelRook.vscode-linter-erlc
+TeddyDD.fish
+akamud.vscode-theme-onedark
+azemoh.theme-onedark
+codezombiech.gitignore
+dkundel.vscode-new-file
+hackwaly.ocaml
+iampeterbanjo.elixirlinter
+mjmcloug.vscode-elixir
+pgourlain.erlang
+rebornix.Ruby

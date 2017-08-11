@@ -20,6 +20,11 @@
     "when": "listFocus"
   },
   {
+    "key": "ctrl+j",
+    "command": "list.select",
+    "when": "listFocus"
+  },
+  {
     "key": "left",
     "command": "-list.collapse",
     "when": "listFocus"
@@ -149,5 +154,31 @@
   {
     "key": "alt+cmd+n",
     "command": "-newFile.createNewFile"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "workbench.files.action.focusOpenEditorsView"
+  },
+  {
+    "key": "cmd+k e",
+    "command": "-workbench.files.action.focusOpenEditorsView"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm"
   }
 ]
