@@ -89,6 +89,7 @@ end
 set -g theme_display_date no
 set -g theme_color_scheme solarized-dark
 set -g theme_display_virtualenv no
+set -g theme_display_cmd_duration no
 
 function fish_user_key_bindings
   bind \cx\cf peco_git_checkout
