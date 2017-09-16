@@ -1,4 +1,9 @@
 " 行番号
+
+set fenc=utf-8
+set nobackup
+set noswapfile
+set showcmd
 set number
 set clipboard+=unnamed,autoselect
 set autoindent
