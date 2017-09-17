@@ -55,8 +55,10 @@ if which opam > /dev/null 2>&1; and [ -d ~/.opam ]
 else
   echo "no opam:("
 end
+set -x NVIM_PYTHON_LOG_FILE $HOME/.nvimlog
 
 # python
+# set -x PYENV_ROOT $HOME/.pyenv
 if which pyenv > /dev/null
   status --is-interactive; and source (pyenv init -|psub)
   if which pyenv-virtualenv-init > /dev/null
