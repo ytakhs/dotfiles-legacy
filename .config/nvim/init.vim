@@ -22,7 +22,6 @@ endif
 
 filetype plugin indent on
 let g:python3_host_prog = '/usr/local/bin/python3'
-let g:deoplete#enable_at_startup = 1
 
 runtime! init/keybindings.vim
 runtime! init/editor.vim
