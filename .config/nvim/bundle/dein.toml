@@ -1,9 +1,8 @@
 [[plugins]]
-repo = "rakr/vim-one"
+repo = "joshdick/onedark.vim"
 hook_add = '''
-let g:airline_theme="one"
-colorscheme one
-set background=dark
+colorscheme onedark
+
 '''
 
 [[plugins]]
@@ -29,3 +28,6 @@ repo = "kbrw/elixir.nvim"
 
 [[plugins]]
 repo = "cocopon/vaffle.vim"
+
+[[plugins]]
+repo = "Shougo/deoplete.nvim"
