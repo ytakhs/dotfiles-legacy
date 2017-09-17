@@ -1,0 +1,40 @@
+[[plugins]]
+repo = "Shougo/dein.vim"
+
+[[plugins]]
+repo = "joshdick/onedark.vim"
+
+[[plugins]]
+repo = "vim-airline/vim-airline"
+
+[[plugins]]
+repo = "Shougo/denite.nvim"
+hook_add = '''
+
+'''
+[[plugins]]
+repo = "cespare/vim-toml"
+
+[[plugins]]
+repo = "Shougo/vimproc.vim"
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "tyru/caw.vim"
+
+[[plugins]]
+repo = "Shougo/unite-outline"
+
+[[plugins]]
+repo = "vim-jp/vim-cpp"
+
+[[plugins]]
+repo = "elixir-editors/vim-elixir"
+
+[[plugins]]
+repo = "Shougo/neosnippet.vim"
+
+[[plugins]]
+repo = "Shougo/neosnippet-snippets"
