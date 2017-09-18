@@ -105,3 +105,4 @@ end
 # else
 #   echo "no conda :("
 # end
+set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths

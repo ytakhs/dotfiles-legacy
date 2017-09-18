@@ -19,3 +19,5 @@ set visualbell t_vb=
 set noerrorbells
 set backspace=indent,eol,start
 syntax on
+
+colorscheme neodark

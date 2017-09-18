@@ -1,41 +1,88 @@
 [[plugins]]
-repo = "joshdick/onedark.vim"
-hook_add = '''
-colorscheme onedark
-
-'''
+repo = "KeitaNakamura/neodark.vim"
+hook_add = """
+let g:neodark#background = '#202020'
+let g:neodark#use_256color = 1
+let g:neodark#terminal_transparent = 1
+let g:lightline = {}
+let g:lightline.colorscheme = 'neodark'
+"""
 
 [[plugins]]
 repo = "vim-airline/vim-airline"
 
 [[plugins]]
 repo = "Shougo/denite.nvim"
-hook_add = '''
+hook_add = """
 if executable("ag")
   call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
   call denite#custom#var("grep", "command", ["ag"])
   nnoremap <silent> ,g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
 endif
-'''
+"""
+
+[[plugins]]
+repo = "Shougo/vimproc.vim"
+build = "make"
+
 [[plugins]]
 repo = "cespare/vim-toml"
+on_ft = "toml"
 
 [[plugins]]
 repo = "elixir-editors/vim-elixir"
+on_ft = ["ex", "exs"]
 
 [[plugins]]
 repo = "kbrw/elixir.nvim"
+on_ft = ["ex", "exs"]
 
 [[plugins]]
 repo = "cocopon/vaffle.vim"
 
 [[plugins]]
 repo = "Shougo/deoplete.nvim"
-hook_add = '''
+hook_add = """
 let g:deoplete#enable_at_startup = 1
-'''
+set completeopt+=noinsert
+"""
+
+# [[plugins]]
+# repo = "osyo-manga/vim-monster"
+# hook_add = """
+# let g:deoplete#omni_patterns = {}
+# let g:deoplete#omni_patterns.ruby = ['[^. *\t]\.\w*', '\h\w*::']
+# """
+# on_ft = ["rb", "ruby"]
+
 [[plugins]]
-repo = "osyo-manga/vim-monster"
-hook_add = '''
-let g:deoplete#sources#omni#input_patterns = { "ruby": "[^. *\t]\.\w*\|\h\w*::"}
-'''
+repo = "kana/vim-textobj-user"
+
+[[plugins]]
+repo = "kana/vim-operator-user"
+
+[[plugins]]
+repo = "rhysd/vim-textobj-ruby"
+
+[[plugins]]
+repo = "tyru/caw.vim"
+hook_add = """
+nmap <C-_> <Plug>(caw:i:toggle)
+vmap <C-_> <Plug>(caw:i:toggle)
+"""
+
+[[plugins]]
+repo = "zchee/deoplete-clang"
+on_ft = ["c", "cpp", "h"]
+depends = ["deoplete.nvim"]
+hook_add = """
+let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
+let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/include/clang"
+"""
+
+[[plugins]]
+repo = "vim-jp/vim-cpp"
+on_ft = ["c", "cpp", "h"]
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
