@@ -18,6 +18,7 @@ set wildmenu wildmode=list:longest,full
 set visualbell t_vb=
 set noerrorbells
 set backspace=indent,eol,start
-syntax on
 
-colorscheme neodark
+syntax on
+set t_Co=256
+colorscheme atom-dark-256

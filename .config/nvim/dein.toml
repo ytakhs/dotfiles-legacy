@@ -1,12 +1,5 @@
 [[plugins]]
-repo = "KeitaNakamura/neodark.vim"
-hook_add = """
-let g:neodark#background = '#202020'
-let g:neodark#use_256color = 1
-let g:neodark#terminal_transparent = 1
-let g:lightline = {}
-let g:lightline.colorscheme = 'neodark'
-"""
+repo = "gosukiwi/vim-atom-dark"
 
 [[plugins]]
 repo = "vim-airline/vim-airline"
@@ -23,7 +16,17 @@ nmap <silent> <C-x><C-f> :<C-u>Denite file_rec<CR>
 nmap <silent> <C-x><C-g> :<C-u>Denite grep<CR>
 nmap <silent> <C-x><C-m> :<C-u>Denite file_mru<CR>
 nmap <silent> <C-x><C-y> :<C-u>Denite neoyank<CR>
-call denite#custom#var('file_rec', 'command', ["rg", "-u", "--files", "-g", "!.git", "-g", "!_build", "-g", "!node_modules"])
+call denite#custom#var('file_rec', 'command', ["rg", "-u", "--hidden", "--files", \
+  "-g", "!.git", \
+  "-g", "!_build", \
+  "-g", "!node_modules", \
+  "-g", "!.cache", \
+  "-g", "!cache", \
+  "-g", "!packages", \
+  "-g", "!.apm", \
+  "-g", "!elpa", \
+  "-g", "!.atom"
+\ ])
 call denite#custom#var("grep", "command", ["rg"])
 call denite#custom#source('file_rec', 'matchers', ['matcher_fuzzy','matcher_ignore_globs'])
 call denite#custom#filter("matcher_ignore_globs", "ignore_globs", [".git/", "_build/", "images/", "imgs/", "*.o", "*.make", "*.beam"])
