@@ -1,7 +1,4 @@
-tmp
 node_modules
 .config/fish/functions
 .git
-vendor/bundle
 _build
-deps
