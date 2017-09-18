@@ -1,0 +1,32 @@
+[[plugins]]
+repo = "Shougo/deoplete.nvim"
+hook_add = """
+let g:deoplete#enable_at_startup = 1
+set completeopt+=noinsert
+"""
+on_i = 1
+
+[[plugins]]
+repo = "cespare/vim-toml"
+on_ft = "toml"
+
+[[plugins]]
+repo = "elixir-editors/vim-elixir"
+on_ft = ["ex", "exs"]
+
+[[plugins]]
+repo = "kbrw/elixir.nvim"
+on_ft = ["ex", "exs"]
+
+[[plugins]]
+repo = "zchee/deoplete-clang"
+on_ft = ["c", "cpp", "h"]
+depends = ["deoplete.nvim"]
+hook_add = """
+let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
+let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/include/clang"
+"""
+
+[[plugins]]
+repo = "vim-jp/vim-cpp"
+on_ft = ["c", "cpp", "h"]
