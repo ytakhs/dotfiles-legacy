@@ -8,15 +8,22 @@ repo = "vim-airline/vim-airline"
 repo = "Shougo/neomru.vim"
 
 [[plugins]]
+repo = "Shougo/neoyank.vim"
+
+[[plugins]]
 repo = "Shougo/denite.nvim"
-dependent = ["neomru.vim"]
+dependent = ["neomru.vim", "neoyank.vim"]
 hook_add = """
 nmap <silent> <C-x><C-[> :<C-u>Denite file<CR>
 nmap <silent> <C-x><C-f> :<C-u>Denite file_rec<CR>
 nmap <silent> <C-x><C-g> :<C-u>Denite grep<CR>
 nmap <silent> <C-x><C-m> :<C-u>Denite file_mru<CR>
 nmap <silent> <C-x><C-y> :<C-u>Denite neoyank<CR>
-call denite#custom#var('file_rec', 'command', ["rg", "-u", "--hidden", "--files", \
+call denite#custom#var('file_rec', 'command', [ \
+  "rg", \
+  "-u", \
+  "--hidden", \
+  "--files", \
   "-g", "!.git", \
   "-g", "!_build", \
   "-g", "!node_modules", \
@@ -25,11 +32,21 @@ call denite#custom#var('file_rec', 'command', ["rg", "-u", "--hidden", "--files"
   "-g", "!packages", \
   "-g", "!.apm", \
   "-g", "!elpa", \
-  "-g", "!.atom"
-\ ])
+  "-g", "!.atom", \
+])
 call denite#custom#var("grep", "command", ["rg"])
 call denite#custom#source('file_rec', 'matchers', ['matcher_fuzzy','matcher_ignore_globs'])
-call denite#custom#filter("matcher_ignore_globs", "ignore_globs", [".git/", "_build/", "images/", "imgs/", "*.o", "*.make", "*.beam"])
+call denite#custom#filter("matcher_ignore_globs", "ignore_globs", [ \
+  ".git/", \
+  "_build/", \
+  "images/", \
+  "imgs/", \
+  "*.o", \
+  "*.make", \
+  "*.beam", \
+  "vendor/bundle", \
+  ".bundle", \
+])
 nnoremap <silent> ,g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
 """
 
