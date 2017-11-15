@@ -10,5 +10,15 @@
     "newFile.defaultFileExtension": "",
     "newFile.defaultBaseFileName": "/",
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline'"
+    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline'",
+    "vsicons.dontShowNewVersionMessage": true,
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.mode": "rls",
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "workbench.panel.location": "bottom"
 }
