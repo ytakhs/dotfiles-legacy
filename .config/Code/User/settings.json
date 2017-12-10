@@ -20,5 +20,6 @@
     "rust.rls": {
         "useRustfmt": true
     },
-    "workbench.panel.location": "bottom"
+    "workbench.panel.location": "bottom",
+    "window.zoomLevel": 0
 }
