@@ -20,6 +20,8 @@
     "rust.rls": {
         "useRustfmt": true
     },
-    "workbench.panel.location": "bottom",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "[go]": {
+        "editor.tabSize": 4
+    }
 }
