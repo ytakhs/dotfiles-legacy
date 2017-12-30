@@ -5,19 +5,27 @@ else
   echo "no nodebrew:("
 end
 
-# erlang
-if [ -d ~/erlang/20.0/ ]
-  source ~/erlang/20.0/activate.fish
-  set -x ERL_AFLAGS "-kernel shell_history enabled"
-else
-  echo "no kerl:("
-end
-
 # elixir
 if which exenv > /dev/null 2>&1 ;and [ -d "$HOME/.exenv" ]
   set -x PATH $HOME/.exenv/shims $PATH
 else
   echo "no exenv:("
+end
+
+if [ -d "/opt/elixir" ]
+  set -x PATH /opt/elixir/bin $PATH
+else
+  echo "no elixir :("
+end
+
+# erlang
+if [ -d "/opt/erlang/20.2.1" ]
+  set -x PATH /opt/erlang/20.2.1/bin $PATH
+  if [ -d "$HOME/.cache/rebar3" ]
+    set -x PATH "$HOME/.cache/rebar3/bin" $PATH
+  end
+else
+  echo "no erlang :("
 end
 
 # ruby
