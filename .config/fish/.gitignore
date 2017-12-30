@@ -1,6 +1,5 @@
 conf.d
 functions/*
-/completions/asdf.fish
 fishd.*
 !functions/curlb.fish
 !functions/peco.fish
@@ -10,3 +9,4 @@ fishd.*
 !functions/pero.fish
 !functions/chrome.fish
 !functions/chrome-canary.fish
+!functions/peco_ssh.fish

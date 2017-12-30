@@ -106,6 +106,7 @@ function fish_user_key_bindings
   bind \cr peco_select_history
   bind \cg peco_select_ghq_repo
   bind \cs peco_source_search
+  bind \cc\cs peco_ssh
 end
 #
 # if which conda > /dev/null 2>&1 ;
