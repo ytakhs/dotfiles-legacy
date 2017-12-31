@@ -23,5 +23,8 @@
     "window.zoomLevel": 0,
     "[go]": {
         "editor.tabSize": 4
+    },
+    "[rust]": {
+        "editor.tabSize": 4
     }
 }
