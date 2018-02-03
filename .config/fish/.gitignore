@@ -10,3 +10,4 @@ fishd.*
 !functions/chrome.fish
 !functions/chrome-canary.fish
 !functions/peco_ssh.fish
+!functions/rust.fish
