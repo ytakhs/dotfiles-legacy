@@ -95,6 +95,10 @@ else
   echo "no diff-highlight"
 end
 
+if [ -d /opt/flutter ]
+  set -x PATH "/opt/flutter/bin" $PATH
+end
+
 # bobthefish
 set -g theme_display_date no
 set -g theme_color_scheme solarized-dark
