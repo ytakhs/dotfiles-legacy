@@ -29,5 +29,6 @@
     },
     "[c]": {
         "editor.tabSize": 4
-    }
+    },
+    "search.useIgnoreFiles": false
 }
