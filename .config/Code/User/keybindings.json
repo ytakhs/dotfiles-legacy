@@ -226,5 +226,35 @@
     "key": "f12",
     "command": "-editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "removeSecondaryCursors",
+    "when": "editorHasMultipleSelections && editorTextFocus"
+  },
+  {
+    "key": "shift+escape",
+    "command": "-removeSecondaryCursors",
+    "when": "editorHasMultipleSelections && editorTextFocus"
   }
 ]
