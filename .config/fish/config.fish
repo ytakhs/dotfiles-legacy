@@ -28,6 +28,11 @@ else
   echo "no erlang :("
 end
 
+# openssl
+if [ -d "/opt/openssl/1.1.0g" ]
+  set -x PATH "/opt/openssl/1.1.0g/bin" $PATH
+end
+
 # ruby
 if which rbenv > /dev/null 2>&1 ;and [ -d "$HOME/.rbenv" ]
   set -x PATH $HOME/.rbenv/shims $PATH
@@ -112,10 +117,5 @@ function fish_user_key_bindings
   bind \cs peco_source_search
   bind \cc\cs peco_ssh
 end
-#
-# if which conda > /dev/null 2>&1 ;
-#   source (conda info --root)/etc/fish/conf.d/conda.fish
-# else
-#   echo "no conda :("
-# end
+
 set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
