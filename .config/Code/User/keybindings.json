@@ -256,5 +256,40 @@
     "key": "shift+escape",
     "command": "-removeSecondaryCursors",
     "when": "editorHasMultipleSelections && editorTextFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "hideSuggestWidget",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+escape",
+    "command": "-hideSuggestWidget",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "search.action.cancel",
+    "when": "listFocus && searchViewletVisible && !inputFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.terminal.hideFindWidget",
+    "when": "terminalFindWidgetVisible && terminalFocus"
+  },
+  {
+    "key": "shift+escape",
+    "command": "-workbench.action.terminal.hideFindWidget",
+    "when": "terminalFindWidgetVisible && terminalFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.closeQuickOpen",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "shift+escape",
+    "command": "-workbench.action.closeQuickOpen",
+    "when": "inQuickOpen"
   }
 ]
