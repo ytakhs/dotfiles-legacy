@@ -57,7 +57,6 @@ else
 end
 set -x GOPATH $HOME/dev
 set -x PATH $GOPATH/bin $PATH
-set -x GHQ_ROOT $GOPATH/.ghq/
 
 # ocaml
 if which opam > /dev/null 2>&1; and [ -d ~/.opam ]

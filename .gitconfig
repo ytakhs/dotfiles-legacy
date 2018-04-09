@@ -5,6 +5,9 @@
 	excludesfile = ~/.gitignore_global
 	editor = /usr/local/bin/vim
 	pager = less -+$LESS -R
+[ghq]
+  root = ~/dev/.ghq
+  root = ~/dev/src
 [credential]
 	helper = gcloud.sh
 [pager]
