@@ -8,6 +8,7 @@
 [ghq]
   root = ~/dev/.ghq
   root = ~/dev/src
+  root = ~/dotfiles
 [credential]
 	helper = gcloud.sh
 [pager]
