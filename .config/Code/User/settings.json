@@ -30,5 +30,7 @@
     "[c]": {
         "editor.tabSize": 4
     },
-    "search.useIgnoreFiles": false
+    "search.useIgnoreFiles": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
 }
