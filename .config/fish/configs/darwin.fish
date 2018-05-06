@@ -42,7 +42,7 @@ else
 end
 
 # rust
-if [ -f ~/.cargo/env ]
+if [ -f $HOME/.cargo/env ]
   set -x PATH $HOME/.cargo/bin $PATH
   set -x RUST_SRC_PATH $HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
 else
@@ -60,8 +60,8 @@ set -x GOPATH $HOME/dev
 set -x PATH $GOPATH/bin $PATH
 
 # ocaml
-if which opam > /dev/null 2>&1; and [ -d ~/.opam ]
-  source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+if which opam > /dev/null 2>&1; and [ -d $HOME/.opam ]
+  source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
   if which rlwrap > /dev/null 2>&1
     alias ocaml="rlwrap ocaml"
   end
@@ -84,11 +84,11 @@ else
 end
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f ~/google-cloud-sdk/path.fish.inc ]
+if [ -f $HOME/google-cloud-sdk/path.fish.inc ]
   if type source > /dev/null
-    source ~/google-cloud-sdk/path.fish.inc
+    source $HOME/google-cloud-sdk/path.fish.inc
   else
-    . ~/google-cloud-sdk/path.fish.inc
+    . $HOME/google-cloud-sdk/path.fish.inc
   end;
 else
   echo "no google-cloud-sdk:("
