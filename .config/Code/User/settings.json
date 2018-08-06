@@ -25,5 +25,11 @@
     },
     "search.useIgnoreFiles": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.locate": {
+        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+        "include": "**/*.rb"
+    },
+    "ruby.intellisense": "rubyLocate"
 }
