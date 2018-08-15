@@ -1,64 +1,27 @@
-pry_config = lambda {
-  colors = {
-    white: "\001\e[0m\002",
-    red: "\001\e[0;31m\002",
-    light_red: "\001\e[1;31m\002"
-  }
+require "benchmark"
+require "json"
+require "yaml"
 
-  Pry.config.prompt = proc do |obj, _nest_level, _pry_|
-    version = ''
-    version << colors[:red] << "[Ruby:#{RUBY_VERSION}]" << colors[:white]
-    version << colors[:light_red] << "[Rails:#{Rails.version}]" << colors[:white] if defined?(Rails)
-    "#{version} #{Pry.config.prompt_name}(#{Pry.view_clip(obj)})> "
-  end
-
-  Pry::Commands.command(/^$/, 'repeat last command') do
-    _pry_.run_command Pry.history.to_a.last
-  end
+colors = {
+  white: "\001\e[0m\002",
+  red: "\001\e[0;31m\002",
+  light_red: "\001\e[1;31m\002"
 }
 
-hirb_config = lambda {
-  Hirb::View.instance_eval do
-    def enable_output_method
-      @output_method = true
-      @old_print = Pry.config.print
-      Pry.config.print = proc do |*args|
-        Hirb::View.view_or_page_output(args[1]) || @old_print.call(*args)
-      end
-    end
+Pry.config.prompt = proc do |obj, _nest_level, _pry_|
+  version = ''
+  version << colors[:red] << "[Ruby:#{RUBY_VERSION}]" << colors[:white]
+  version << colors[:light_red] << "[Rails:#{Rails.version}]" << colors[:white] if defined?(Rails)
+  "#{version} #{Pry.config.prompt_name}(#{Pry.view_clip(obj)})> "
+end
 
-    def disable_output_method
-      Pry.config.print = @old_print
-      @output_method = nil
-    end
-  end
-  Hirb.enable
-}
+Pry::Commands.command(/^$/, 'repeat last command') do
+  _pry_.run_command Pry.history.to_a.last
+end
 
-awesome_print_config = lambda {
-  AwesomePrint.pry!
-}
-
-byebug_config = lambda {
+if defined?(PryByebug)
   Pry.commands.alias_command 's', 'step'
   Pry.commands.alias_command 'n', 'next'
   Pry.commands.alias_command 'f', 'finish'
   Pry.commands.alias_command 'c', 'continue'
-}
-
-begin
-  require 'awesome_print'
-  awesome_print_config.call
-rescue LoadError
-  puts 'no awesome_print'
 end
-
-begin
-  require 'hirb'
-  hirb_config.call
-rescue LoadError
-  puts 'no hirb'
-end
-
-pry_config.call
-byebug_config.call if defined?(PryByebug)
