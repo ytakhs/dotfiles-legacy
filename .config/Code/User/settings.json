@@ -31,5 +31,6 @@
         "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
         "include": "**/*.rb"
     },
-    "ruby.intellisense": "rubyLocate"
+    "ruby.intellisense": "rubyLocate",
+    "breadcrumbs.enabled": true
 }
