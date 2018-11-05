@@ -37,5 +37,6 @@
     "vim.handleKeys": {
         "<C-e>": false,
         "<C-a>": false,
+        "<C-n>": false,
     }
 }
