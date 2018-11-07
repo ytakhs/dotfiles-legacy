@@ -33,10 +33,14 @@
     },
     "ruby.intellisense": "rubyLocate",
     "breadcrumbs.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
         "<C-e>": false,
         "<C-a>": false,
         "<C-n>": false,
-    }
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {"before": ["0"], "after": []},
+    ],
 }
