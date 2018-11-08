@@ -39,7 +39,4 @@
         "<C-a>": false,
         "<C-n>": false,
     },
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {"before": ["0"], "after": []},
-    ],
 }
