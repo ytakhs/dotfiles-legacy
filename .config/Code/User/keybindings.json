@@ -293,16 +293,6 @@
     "when": "inQuickOpen"
   },
   {
-    "key": "ctrl+v",
-    "command": "cursorPageDown",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "pagedown",
-    "command": "-cursorPageDown",
-    "when": "textInputFocus"
-  },
-  {
     "key": "ctrl+u",
     "command": "cursorPageUp",
     "when": "textInputFocus"
