@@ -41,11 +41,7 @@
   },
   {
     "key": "ctrl+x ctrl+f",
-    "command": "extension.advancedNewFile"
-  },
-  {
-    "key": "alt+cmd+n",
-    "command": "-extension.advancedNewFile"
+    "command": "extension.advancedOpenFile"
   },
   {
     "key": "ctrl+cmd+n",
@@ -146,10 +142,6 @@
     "key": "shift+cmd+left",
     "command": "-cursorHomeSelect",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+x ctrl+f",
-    "command": "newFile.createNewFile"
   },
   {
     "key": "alt+cmd+n",
@@ -301,5 +293,9 @@
     "key": "pageup",
     "command": "-cursorPageUp",
     "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+t",
+    "command": "extension.ghqWindowOpen"
   },
 ]

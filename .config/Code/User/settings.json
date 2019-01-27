@@ -7,8 +7,6 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "workbench.editor.enablePreview": false,
-    "newFile.defaultFileExtension": "",
-    "newFile.defaultBaseFileName": "/",
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline'",
     "vsicons.dontShowNewVersionMessage": true,

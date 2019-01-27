@@ -11,3 +11,4 @@ fishd.*
 !functions/chrome-canary.fish
 !functions/peco_ssh.fish
 !functions/rust.fish
+fish_variables
