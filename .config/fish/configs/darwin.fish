@@ -36,7 +36,7 @@ end
 # ruby
 if which rbenv > /dev/null 2>&1 ;and [ -d "$HOME/.rbenv" ]
   set -x PATH $HOME/.rbenv/shims $PATH
-  status --is-interactive; and source (rbenv init -|psub)
+  status --is-interactive && source (rbenv init -|psub)
 else
   echo "no rbenv:("
 end
@@ -50,11 +50,10 @@ else
 end
 
 # go
-if which goenv > /dev/null 2>&1 ;and [ -d "$HOME/.goenv" ]
-  set -x PATH $HOME/.goenv/shims $PATH
-  goenv init - | source
+if [ -d "$HOME/go" ]
+  set -x PATH $HOME/go/bin $PATH
 else
-  echo "no goenv:("
+  echo "no $HOME/go :("
 end
 set -x GOPATH $HOME/dev
 set -x PATH $GOPATH/bin $PATH
@@ -73,9 +72,9 @@ set -x NVIM_PYTHON_LOG_FILE $HOME/.nvimlog
 # python
 # set -x PYENV_ROOT $HOME/.pyenv
 if which pyenv > /dev/null
-  status --is-interactive; and source (pyenv init -|psub)
+  status --is-interactive && source (pyenv init -|psub)
   if which pyenv-virtualenv-init > /dev/null
-    status --is-interactive; and source (pyenv virtualenv-init -|psub)
+    status --is-interactive && source (pyenv virtualenv-init -|psub)
   else
     echo 'no pyenv-virtualenv :('
   end
