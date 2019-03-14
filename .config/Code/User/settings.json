@@ -40,4 +40,6 @@
         "<C-a>": false,
         "<C-n>": false,
     },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
