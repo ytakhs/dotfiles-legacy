@@ -104,3 +104,7 @@ if [ -d /opt/flutter ]
 end
 
 set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
+
+if which direnv > /dev/null 2>&1
+  eval (direnv hook fish)
+end
