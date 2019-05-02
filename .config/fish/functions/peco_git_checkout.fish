@@ -1,4 +1,6 @@
 function peco_git_checkout
+  __fish_disable_bracketed_paste
+
   git branch -a | peco | tr -d ' ' | read branch
   echo $branch
   if [ $branch ]
@@ -9,5 +11,6 @@ function peco_git_checkout
       git checkout $branch
     end
   end
+
   commandline -f repaint
 end

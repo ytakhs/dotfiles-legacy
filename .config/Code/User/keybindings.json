@@ -298,4 +298,12 @@
     "key": "cmd+t",
     "command": "extension.ghqWindowOpen"
   },
+  {
+    "key": "ctrl+shift+cmd+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug"
+  },
 ]
