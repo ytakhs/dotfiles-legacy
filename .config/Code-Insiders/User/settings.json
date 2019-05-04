@@ -1,0 +1,45 @@
+{
+    "editor.fontSize": 10,
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.cursorStyle": "line-thin",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.editor.enablePreview": false,
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline'",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
+    "[go]": {
+        "editor.tabSize": 4
+    },
+    "[rust]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true
+    },
+    "[c]": {
+        "editor.tabSize": 4
+    },
+    "[python]":{
+        "editor.tabSize": 4
+    },
+    "search.useIgnoreFiles": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.locate": {
+        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+        "include": "**/*.rb"
+    },
+    "ruby.intellisense": "rubyLocate",
+    "breadcrumbs.enabled": true,
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-e>": false,
+        "<C-a>": false,
+        "<C-n>": false,
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+}
