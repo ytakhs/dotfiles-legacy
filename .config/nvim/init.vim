@@ -19,3 +19,8 @@ set visualbell t_vb=
 set noerrorbells
 set backspace=indent,eol,start
 syntax on
+
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-a> <Home>
+imap <C-e> <End>
