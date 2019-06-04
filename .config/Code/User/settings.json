@@ -24,6 +24,9 @@
     "[python]":{
         "editor.tabSize": 4
     },
+    "[html]": {
+        "editor.tabSize": 2
+    },
     "search.useIgnoreFiles": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
