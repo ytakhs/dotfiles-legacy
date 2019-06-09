@@ -44,8 +44,9 @@ cat "${CURRENT_DIR}/.config/Code/User/extensions.txt" | xargs -I{} code --instal
 ## vim
 ln -snf "${CURRENT_DIR}/.vimrc" "${HOME}/.vimrc"
 
-## gitconfig
+## git
 ln -snf "${CURRENT_DIR}/.gitconfig" "$HOME/.gitconfig"
+ln -snf "${CURRENT_DIR}/.gitignore_global" "$HOME/.gitignore_global"
 
 ## tic
 ln -snf "${CURRENT_DIR}/.tigrc" "$HOME/.tigrc"
