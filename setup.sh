@@ -20,6 +20,7 @@ function check_command_exists() {
   fi
 }
 
+export CURRENT_DIR="$(pwd)"
 export XDG_CONFIG_HOME="${HOME}/.config"
 case "$(uname)" in
   "Darwin" ) VSCODE_USER_DIR="${HOME}/Library/Application Support/Code/User" ;;
