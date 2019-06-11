@@ -5,6 +5,11 @@ case '*'
   echo "not supported"
 end
 
+if [ -f "$HOME/.config/fish/configs/individual.fish" ]
+  echo "load individual.fish"
+  source "$HOME/.config/fish/configs/individual.fish"
+end
+
 # bobthefish
 set -g theme_display_date no
 set -g theme_color_scheme solarized-dark
