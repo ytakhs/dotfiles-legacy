@@ -27,6 +27,9 @@
     "[html]": {
         "editor.tabSize": 2
     },
+    "[makefile]": {
+        "editor.tabSize": 4
+    },
     "search.useIgnoreFiles": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
