@@ -42,6 +42,7 @@
         "ruby": true,
     },
     "ruby.intellisense": "rubyLocate",
+    "ruby.format": "standard",
     "breadcrumbs.enabled": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
@@ -52,5 +53,4 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.external.osxExec": "iTerm.app",
-    "ruby.format": "standard",
 }
