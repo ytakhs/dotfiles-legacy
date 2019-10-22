@@ -53,4 +53,5 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.external.osxExec": "iTerm.app",
+    "vscode-advanced-open-file.selectPath": false
 }
