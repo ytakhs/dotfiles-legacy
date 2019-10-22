@@ -1,6 +1,8 @@
 switch (uname)
 case Darwin
   source $HOME/.config/fish/configs/darwin.fish
+case Linux
+  source $HOME/.config/fish/configs/linux.fish
 case '*'
   echo "not supported"
 end
