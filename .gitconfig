@@ -3,7 +3,6 @@
 	email = jit.y.31@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = /usr/local/bin/vim
 	pager = less -+$LESS -R
 [ghq]
   root = ~/dev/.ghq
