@@ -17,6 +17,14 @@
     "command": "extension.ghqWindowOpen"
   },
   {
+    "key": "meta+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "cursorUp"
+  },
+  {
     "key": "ctrl+n",
     "command": "cursorDown"
   },
@@ -60,6 +68,19 @@
     "key": "ctrl+f",
     "command": "list.expand",
     "when": "listFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "meta+f",
+    "command": "actions.find",
+  },
+  {
+    "key": "meta+shift+f",
+    "command": "workbench.action.findInFiles",
   },
   {
     "key": "right",
