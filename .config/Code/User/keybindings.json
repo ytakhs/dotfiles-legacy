@@ -22,11 +22,23 @@
   },
   {
     "key": "ctrl+p",
-    "command": "cursorUp"
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
   },
   {
     "key": "ctrl+n",
-    "command": "cursorDown"
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "cursorUp",
+    "when": "editor"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "cursorDown",
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+a",
@@ -42,7 +54,13 @@
   },
   {
     "key": "ctrl+h",
-    "command": "deleteLeft"
+    "command": "deleteLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "deleteLeft",
+    "when": "findInputFocused"
   },
   {
     "key": "shift+meta+]",
@@ -65,14 +83,19 @@
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
+    "key": "meta+c",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "meta+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "textInputFocus"
+  },
+  {
     "key": "ctrl+f",
     "command": "list.expand",
     "when": "listFocus"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "list.focusDown",
-    "when": "listFocus && !inputFocus"
   },
   {
     "key": "meta+f",
@@ -384,5 +407,13 @@
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+meta+h",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-editor.action.startFindReplaceAction"
   },
 ]
