@@ -425,5 +425,14 @@
     "key": "meta+]",
     "command": "editor.action.indentLines",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-editor.action.selectAll",
+    "when": "textInputFocus"
   }
 ]
