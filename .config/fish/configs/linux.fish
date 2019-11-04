@@ -9,7 +9,7 @@ else
   echo "no cargo :("
 end
 
-if [ -f $HOME/.rbenv ]
+if [ -d $HOME/.rbenv ]
   set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
   status --is-interactive && source (rbenv init -|psub)
 else
