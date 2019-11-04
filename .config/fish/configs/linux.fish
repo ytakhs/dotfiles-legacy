@@ -4,13 +4,13 @@ set -x EDITOR vim
 
 # rust
 if [ -f $HOME/.cargo/env ]
-  set -Ux fish_user_paths $HOME/.cargo/bin $fish_user_paths
+  set -x fish_user_paths $HOME/.cargo/bin $fish_user_paths
 else
   echo "no cargo :("
 end
 
 if [ -d $HOME/.rbenv ]
-  set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
+  set -x fish_user_paths $HOME/.rbenv/bin $fish_user_paths
   status --is-interactive && source (rbenv init -|psub)
 else
   echo "no rbenv :("
