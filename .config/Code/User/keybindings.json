@@ -416,4 +416,14 @@
     "key": "ctrl+h",
     "command": "-editor.action.startFindReplaceAction"
   },
+  {
+    "key": "meta+[",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "meta+]",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  }
 ]
