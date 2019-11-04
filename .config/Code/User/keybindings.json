@@ -33,7 +33,7 @@
   {
     "key": "ctrl+p",
     "command": "cursorUp",
-    "when": "editor"
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+n",
