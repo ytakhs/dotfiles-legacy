@@ -1,5 +1,6 @@
 conf.d
 functions/*
+completions/*
 fishd.*
 !functions/curlb.fish
 !functions/peco.fish
