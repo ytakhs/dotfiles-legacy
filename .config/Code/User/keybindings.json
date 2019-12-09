@@ -41,6 +41,16 @@
     "when": "textInputFocus"
   },
   {
+    "key": "ctrl+p",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
     "key": "ctrl+a",
     "command": "cursorHome"
   },

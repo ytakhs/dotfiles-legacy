@@ -10,7 +10,7 @@
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline'",
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "[go]": {
         "editor.tabSize": 4
     },
