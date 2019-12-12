@@ -1,10 +1,3 @@
-# nodebrew
-if [ -d "$HOME/.nodebrew" ]
-  set -x PATH $HOME/.nodebrew/current/bin $PATH
-else
-  echo "no nodebrew:("
-end
-
 # elixir
 if which exenv > /dev/null 2>&1 ;and [ -d "$HOME/.exenv" ]
   set -x PATH $HOME/.exenv/shims $PATH
