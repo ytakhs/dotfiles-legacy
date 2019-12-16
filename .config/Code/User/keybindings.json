@@ -2,11 +2,13 @@
 [
   {
     "key": "ctrl+f",
-    "command": "cursorRight"
+    "command": "cursorRight",
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+b",
-    "command": "cursorLeft"
+    "command": "cursorLeft",
+    "when": "textInputFocus"
   },
   {
     "key": "meta+shift+p",
@@ -52,15 +54,17 @@
   },
   {
     "key": "ctrl+a",
-    "command": "cursorHome"
+    "command": "cursorHome",
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+e",
-    "command": "cursorEnd"
+    "command": "cursorEnd",
+    "when": "textInputFocus"
   },
   {
-    "key": "alt+a",
-    "command": "editor.action.selectAll"
+    "key": "meta+a",
+    "command": "editor.action.selectAll",
   },
   {
     "key": "ctrl+h",
