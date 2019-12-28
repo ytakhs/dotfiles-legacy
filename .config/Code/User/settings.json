@@ -54,5 +54,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.external.osxExec": "iTerm.app",
     "vscode-advanced-open-file.selectPath": false,
+    "vscode-advanced-open-file.groupDirectoriesFirst": true,
     "terminal.integrated.shell.linux": "/usr/bin/fish"
 }
