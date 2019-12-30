@@ -463,5 +463,9 @@
     "key": "enter",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourcesRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
   }
 ]
