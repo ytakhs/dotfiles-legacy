@@ -20,8 +20,5 @@ set -g theme_display_cmd_duration no
 
 function fish_user_key_bindings
   bind \cx\cf peco_git_checkout
-  bind \cr peco_select_history
   bind \cg peco_select_ghq_repo
-  bind \cs peco_source_search
-  bind \cc\cs peco_ssh
 end
