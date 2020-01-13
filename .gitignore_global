@@ -7,3 +7,4 @@ GTAGS
 node_modules
 *.code-workspace
 .envrc
+.vscode
