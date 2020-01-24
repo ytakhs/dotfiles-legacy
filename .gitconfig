@@ -5,9 +5,7 @@
 	excludesfile = ~/.gitignore_global
 	pager = less -+$LESS -R
 [ghq]
-  root = ~/dotfiles
   root = ~/dev/.ghq
-  root = ~/dev/src
 [credential]
 	helper = gcloud.sh
 [pager]
