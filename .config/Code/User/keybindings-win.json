@@ -66,6 +66,16 @@
     "when": "listFocus"
   },
   {
+    "key": "ctrl+f",
+    "command": "list.expand",
+    "when": "listFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "list.collapse",
+    "when": "listFocus"
+  },
+  {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
   },
