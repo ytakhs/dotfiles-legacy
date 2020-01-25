@@ -21,3 +21,12 @@ if [ -d $HOME/dev/opt/flutter ]
 else
   echo "no flutter :("
 end
+
+if [ -d /home/linuxbrew/.linuxbrew ]
+  set -x HOMEBREW_PREFIX /home/linuxbrew/.linuxbrew
+  set -x HOMEBREW_CELLAR /home/linuxbrew/.linuxbrew/Cellar
+  set -x HOMEBREW_REPOSITORY /home/linuxbrew/.linuxbrew/Homebrew
+  set -x PATH /home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin $PATH
+  set -x MANPATH /home/linuxbrew/.linuxbrew/share/man $MANPATH
+  set -x INFOPATH /home/linuxbrew/.linuxbrew/share/info $INFOPATH
+end
