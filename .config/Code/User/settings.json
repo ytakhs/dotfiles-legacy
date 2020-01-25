@@ -8,7 +8,7 @@
     "files.trimTrailingWhitespace": true,
     "workbench.editor.enablePreview": false,
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline'",
+    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline', 'Delugia Nerd Font'",
     "vsicons.dontShowNewVersionMessage": true,
     "window.zoomLevel": 0,
     "[go]": {
