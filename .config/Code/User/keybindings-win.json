@@ -76,6 +76,11 @@
     "when": "listFocus"
   },
   {
+    "key": "enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourcesRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
   },
