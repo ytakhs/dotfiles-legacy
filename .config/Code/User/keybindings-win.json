@@ -76,11 +76,6 @@
     "when": "listFocus"
   },
   {
-    "key": "enter",
-    "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourcesRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
   },
@@ -148,5 +143,14 @@
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourcesRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.closeActiveEditor"
   }
 ]
