@@ -5,3 +5,8 @@ require 'irb/save-history'
 
 IRB.conf.save_history = true
 IRB.conf.history_file = File.expand_path(File.join(ENV['HOME'], '.irb_history'))
+
+if defined? Pry
+  Pry.start
+  exit
+end
