@@ -1,23 +1,23 @@
 [user]
-	name = YUJI takahashi
-	email = jit.y.31@gmail.com
+  name = YUJI takahashi
+  email = jit.y.31@gmail.com
 [core]
-	excludesfile = ~/.gitignore_global
-	pager = less -+$LESS -R
+  excludesfile = ~/.gitignore_global
+  pager = delta --paging never
 [ghq]
   root = ~/dev/.ghq
 [credential]
-	helper = gcloud.sh
+  helper = gcloud.sh
 [pager]
-  log = diff-highlight | less -+$LESS -R
-  show = diff-highlight | less -+$LESS -R
-  diff = diff-highlight | less -+$LESS -R
-	blame = diff-highlight | less -+$LESS -R
+  log   = delta --paging never | less -+$LESS -R
+  show  = delta --paging never | less -+$LESS -R
+  diff  = delta --paging never | less -+$LESS -R
+  blame = delta --paging never | less -+$LESS -R
 [alias]
-	st = status
-	br = branch
-	co = checkout
-	cm = commit -m
+  st = status
+  br = branch
+  co = checkout
+  cm = commit -m
 [color]
   branch = auto
   diff = auto
