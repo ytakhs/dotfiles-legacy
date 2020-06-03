@@ -17,7 +17,7 @@ pry_prompt = proc do |obj, _nest_level, _pry_|
   "#{version} #{Pry.config.prompt_name}(#{Pry.view_clip(obj)})> "
 end
 
-if defined? Pry::Prompt
+if !Pry::Prompt.const_defined?(:MAP)
   pry_prompt = Pry::Prompt.new(
     "with_versions",
     "prompt with versions",
