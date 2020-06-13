@@ -3,13 +3,13 @@ set -x PATH $GOPATH/bin $PATH
 set -x EDITOR vim
 
 # vcxsrv for WSL2
-if [ -f /etc/resolve.conf ];
+if [ -e /etc/resolve.conf ];
   set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 end
 
 # rust
 if [ -f $HOME/.cargo/env ]
-  set -x fish_user_paths $HOME/.cargo/bin $fish_user_paths
+  set -x PATH $HOME/.cargo/bin $PATH
 else
   echo "no cargo :("
 end
