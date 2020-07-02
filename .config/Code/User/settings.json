@@ -1,47 +1,16 @@
 {
-    "breadcrumbs.enabled": true,
     "editor.fontSize": 10,
     "editor.tabSize": 2,
-    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
+    "workbench.colorTheme": "Moonlight II",
+    "workbench.iconTheme": "vscode-icons",
     "editor.cursorStyle": "line-thin",
-    "editor.suggestSelection": "first",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline', 'Delugia Nerd Font'",
-    "terminal.integrated.shell.linux": "/usr/local/bin/fish",
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "One Monokai",
-    "workbench.iconTheme": "vscode-icons",
     "workbench.editor.enablePreview": false,
-    "ruby.codeCompletion": "rcodetools",
-    "ruby.format": "standard",
-    "ruby.intellisense": "rubyLocate",
-    "ruby.lint": {
-        "ruby": true,
-    },
-    "ruby.locate": {
-        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
-        "include": "**/*.rb"
-    },
-    "ruby.useLanguageServer": true,
-    "search.useIgnoreFiles": false,
-    "solargraph.diagnostics": true,
-    "solargraph.completion": true,
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline', 'Delugia Nerd Font'",
     "vsicons.dontShowNewVersionMessage": true,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "vim.useSystemClipboard": true,
-    "vim.handleKeys": {
-        "<C-e>": false,
-        "<C-a>": false,
-        "<C-n>": false,
-    },
-    "vscode-advanced-open-file.selectPath": false,
-    "vscode-advanced-open-file.groupDirectoriesFirst": true,
+    "window.zoomLevel": 0,
     "[go]": {
         "editor.tabSize": 4
     },
@@ -60,5 +29,37 @@
     },
     "[makefile]": {
         "editor.tabSize": 4
-    }
+    },
+    "search.useIgnoreFiles": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.locate": {
+        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+        "include": "**/*.rb"
+    },
+    "ruby.lint": {
+        "ruby": true,
+    },
+    "ruby.format": "standard",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useLanguageServer": true,
+    "solargraph.diagnostics": true,
+    "solargraph.completion": true,
+    "breadcrumbs.enabled": true,
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-e>": false,
+        "<C-a>": false,
+        "<C-n>": false,
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.external.osxExec": "iTerm.app",
+    "vscode-advanced-open-file.selectPath": false,
+    "vscode-advanced-open-file.groupDirectoriesFirst": true,
+    "terminal.integrated.shell.linux": "/usr/local/bin/fish",
+    "rust-client.enableMultiProjectSetup": null,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
 }
