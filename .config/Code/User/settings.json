@@ -10,7 +10,7 @@
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline', 'Delugia Nerd Font'",
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "[go]": {
         "editor.tabSize": 4
     },
@@ -21,7 +21,7 @@
     "[c]": {
         "editor.tabSize": 4
     },
-    "[python]": {
+    "[python]":{
         "editor.tabSize": 4
     },
     "[html]": {
@@ -61,5 +61,6 @@
     "terminal.integrated.shell.linux": "/usr/local/bin/fish",
     "rust-client.enableMultiProjectSetup": null,
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "html.format.enable": false
 }
