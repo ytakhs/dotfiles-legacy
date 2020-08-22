@@ -41,7 +41,6 @@
     "ruby.lint": {
         "ruby": true,
     },
-    "ruby.format": "standard",
     "ruby.intellisense": "rubyLocate",
     "ruby.useLanguageServer": true,
     "solargraph.diagnostics": true,
