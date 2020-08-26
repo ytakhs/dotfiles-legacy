@@ -19,7 +19,7 @@ else
 end
 
 if [ -d $HOME/.rbenv ]
-  set -x fish_user_paths $HOME/.rbenv/bin $fish_user_paths
+  set -x PATH $HOME/.rbenv/bin $PATH
   status --is-interactive && source (rbenv init -|psub)
 else
   echo "no rbenv :("
