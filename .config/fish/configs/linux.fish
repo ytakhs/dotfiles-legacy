@@ -24,3 +24,9 @@ if [ -d $HOME/.rbenv ]
 else
   echo "no rbenv :("
 end
+
+if [ -d $HOME/.local ]
+  set -x PATH $HOME/.local/bin $PATH
+else
+  echo "no $HOME/.local"
+end
