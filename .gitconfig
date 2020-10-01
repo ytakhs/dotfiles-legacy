@@ -7,7 +7,6 @@
 [ghq]
   root = ~/dev/.ghq
 [credential]
-  helper = gcloud.sh
 [pager]
   log   = delta --paging never | less -+$LESS -R
   show  = delta --paging never | less -+$LESS -R
