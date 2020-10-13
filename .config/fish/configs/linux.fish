@@ -34,7 +34,7 @@ end
 set -x PATH /usr/local/go/bin $PATH
 
 # node
-set -x PATH fish_user_paths $HOME/.nodenv/bin $PATH
-if which nodenv 2>&1 /dev/null
+if [ -d $HOME/.nodenv ]
+  set -x PATH $HOME/.nodenv/bin $PATH
   status --is-interactive; and source (nodenv init -|psub)
 end
