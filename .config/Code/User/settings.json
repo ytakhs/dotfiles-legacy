@@ -21,7 +21,7 @@
     "[c]": {
         "editor.tabSize": 4
     },
-    "[python]":{
+    "[python]": {
         "editor.tabSize": 4
     },
     "[html]": {
@@ -61,5 +61,16 @@
     "rust-client.enableMultiProjectSetup": null,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "html.format.enable": false
+    "html.format.enable": false,
+    "terraform.languageServer": {
+        "external": true,
+        "pathToBinary": "",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    },
+    "go.formatTool": "gofmt",
+    "editor.formatOnSaveMode": "modifications"
 }
