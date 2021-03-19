@@ -1,6 +1,6 @@
 [user]
-  name = YUJI takahashi
-  email = jit.y.31@gmail.com
+  name  = jtakh
+  email = 21127627+jit-y@users.noreply.github.com
 [core]
   excludesfile = ~/.gitignore_global
   pager = delta --paging never
