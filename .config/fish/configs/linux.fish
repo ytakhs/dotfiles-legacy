@@ -11,7 +11,7 @@ else
   echo "cannot resolve"
 end
 
-set -x LIBGL_ALWAYS_INDIRECT=true
+set -x LIBGL_ALWAYS_INDIRECT true
 
 # rust
 if [ -f $HOME/.cargo/env ]
