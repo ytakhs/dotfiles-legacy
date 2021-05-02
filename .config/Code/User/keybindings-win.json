@@ -152,5 +152,27 @@
   {
     "key": "alt+w",
     "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+x f",
+    "command": "extension.advancedOpenFile"
+  },
+  {
+    "key": "home",
+    "when": "textInputFocus",
+    "command": "cursorHome"
+  },
+  {
+    "key": "end",
+    "when": "textInputFocus",
+    "command": "cursorEnd"
+  },
+  {
+    "key": "shift+alt+z",
+    "command": "redo"
+  },
+  {
+    "key": "alt+z",
+    "command": "undo"
   }
 ]

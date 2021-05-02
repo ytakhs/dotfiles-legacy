@@ -8,7 +8,7 @@
     "files.trimTrailingWhitespace": true,
     "workbench.editor.enablePreview": false,
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline', 'Delugia Nerd Font'",
+    "terminal.integrated.fontFamily": "'Meslo LG M DZ for Powerline', 'Delugia Nerd Font', 'MesloLGM NF'",
     "vsicons.dontShowNewVersionMessage": true,
     "window.zoomLevel": 1,
     "[go]": {
@@ -57,7 +57,6 @@
     "terminal.external.osxExec": "iTerm.app",
     "vscode-advanced-open-file.selectPath": false,
     "vscode-advanced-open-file.groupDirectoriesFirst": true,
-    "terminal.integrated.shell.linux": "/usr/local/bin/fish",
     "rust-client.enableMultiProjectSetup": null,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
@@ -72,5 +71,5 @@
         "trace.server": "off"
     },
     "go.formatTool": "gofmt",
-    "editor.formatOnSaveMode": "modifications"
+    "editor.formatOnSaveMode": "modifications",
 }
