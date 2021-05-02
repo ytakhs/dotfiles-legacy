@@ -8,4 +8,4 @@ fishd.*
 !functions/pero.fish
 fish_variables
 
-configs/individual.fish
+configs/custom.fish

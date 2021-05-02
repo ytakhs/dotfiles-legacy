@@ -7,9 +7,9 @@ case '*'
   echo "not supported"
 end
 
-if [ -f "$HOME/.config/fish/configs/individual.fish" ]
-  echo "load individual.fish"
-  source "$HOME/.config/fish/configs/individual.fish"
+if [ -f "$HOME/.config/fish/configs/custom.fish" ]
+  echo "load custom.fish"
+  source "$HOME/.config/fish/configs/custom.fish"
 end
 
 # bobthefish
