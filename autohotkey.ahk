@@ -17,6 +17,7 @@
   $<!n::Send, ^n
   $<!f::Send, ^f
   $<!l::Send, ^l
+  $<!a::Send, ^a
 
   <![::Send, !{Left}
   <!]::Send, !{Right}
@@ -42,3 +43,6 @@ $!w::
   Else
     Send, ^w
   Return
+
+WheelUp::Send, {WheelDown}
+WheelDown::Send, {WheelUp}
