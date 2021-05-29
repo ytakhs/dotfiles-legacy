@@ -20,5 +20,6 @@ set -g theme_display_cmd_duration no
 
 function fish_user_key_bindings
   bind \cx\cf peco_git_checkout
+  bind \cxf peco_git_checkout
   bind \cg peco_select_ghq_repo
 end

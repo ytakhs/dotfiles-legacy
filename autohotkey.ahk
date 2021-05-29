@@ -1,12 +1,3 @@
-; Emacs like
-<^b::Send, {Left}
-<^f::Send, {Right}
-<^p::Send, {Up}
-<^n::Send, {Down}
-<^a::Send, {Home}
-<^e::Send, {End}
-<^h::Send, {Backspace}
-
 #IfWinNotActive ahk_exe WindowsTerminal.exe
   <^k::Send, +{End}{Del}
   $!v::Send, ^v
